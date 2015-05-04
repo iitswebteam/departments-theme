@@ -1,0 +1,155 @@
+
+//block view
+ .script-list ul {
+  .marginPaddingZero;
+  list-style-type: none;
+}
+
+.front .script-list ul li { 
+  border-bottom: 1px dashed #666;
+  padding: 10px 0;
+}
+
+#block-views-news-block-news-block h2.block-title,
+#block-views-news-block-events-views-block h2.block-title {
+  font-weight: bold;
+  .font-size(18px);
+  margin-bottom: 5px;
+  background: @blockTitleBlue;
+  padding: 8px;
+  color: @white;
+}
+
+//hides list
+ .view-news-block .script-list ul li,
+ .departmental-events .script-list ul li { 
+  display:none;
+  display : block\9;
+}
+
+//then shows only 3 of the list
+.front .view-news-block .script-list ul li:nth-child(-n+3),
+.front .departmental-events .script-list ul li:nth-child(-n+3) {
+  display:block;
+ // padding: 15px 5px;
+}
+
+//hide feed time and feed date for News block only
+ .front #block-views-news-block-news-block, .front .view-news-block  {
+    .feed-time, .feed-date {display:none;} 
+ }
+
+.script-list {
+  .font-size(14px);
+  .feed-description a {line-height: 12px;}
+}
+
+
+
+.script-list  a:hover {text-decoration: underline;}
+
+.script-list .view-all a, .script-list .view-all-campus-events a {
+  .border-radius(2px);
+  .font-size(13px);
+  color: @greyMid;
+  float: right;
+  font-weight: 600;
+  background: @greyLightNav;
+  border: 1px solid @greyLight;
+  padding: 6px;
+  text-decoration: none;
+  .text-shadow(0 1px 3px rgba(255, 255, 255, 0.20));
+
+}
+
+ .departmental-events .script-list .view-all a,
+ .view-news-block .script-list .view-all a {display: block;}
+
+//events block feed and time styles
+//embedded styles
+.departmental-events { 
+      
+      .feed-date {
+         
+          .font-size(18px);
+          background: @blueLight;
+          color: @white;
+          font-weight:bold;
+          float: left;
+          height: 40px;
+          margin: 0 8px 2px 0;
+          padding: 5px;
+          text-align: center;
+          width: 40px;
+     }
+    
+     .feed-time {
+          .font-size(15px);
+          color: @greyMid;
+          margin-left:  60px;
+          padding-bottom: 1px;
+        }
+
+    .feed-description {
+          height: 34px;
+          overflow: hidden;
+    }
+
+    .article-type-page:nth-child(even) {background: @beigeLight;}
+
+}
+
+
+
+//Full List View
+ .not-front .departmental-events  {
+         
+         .feed-description {
+            padding-top: 3px;
+            height: 29px; 
+            
+          } 
+      }
+
+.not-front .script-list ul li:nth-child(odd) {background:@greylightbg;}
+#main-content .view-all a {display:none;} //hide view all btn on Full list page
+
+#main-content .script-list  {
+      
+        margin-top: 20px;
+        
+       // .feed-time {clear:none;}
+        
+        ul li {
+          display:block;
+          border:none;
+          margin-bottom: 10px;
+        }
+
+}
+//for news only
+.article-content .news-list-page, 
+.not-front .view-news-block  .news-list-page {
+
+      .font-size(13px);
+
+       .feed-date {
+          float: left;
+          width: 100px;
+      }
+
+       .feed-time {display:none;}
+
+        ul li {padding:10px;}
+}
+
+.two-sidebars {
+
+        .feed-description {margin-left: 100px;}
+
+}
+
+
+
+
+

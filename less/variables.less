@@ -1,0 +1,42 @@
+// Base
+@bodyBackground:    @whiteOff;
+@textColor:         @greyDark;
+@linkColor:         @blueDesaturated;
+@linkHoverColor:    @blueDark;
+@linkVisitedColor:  darken( @blueDesaturated, 15% );
+@headerColor:       @blueDark;
+
+// Maximized (aka. "widescreen desktop") layout measures
+@maxColumnCount:          4;
+@CTAblockMargin:          20px;
+@CTApadding:              10px;
+@maxMarginWidth:          10px;
+@maxGutterWidth:          20px;
+@maxColumnWidth:          230px;
+@max2ColumnWidth:         ( ( @maxColumnWidth * 2 ) + @maxGutterWidth );
+@max3ColumnWidth:         ( ( @maxColumnWidth * 3 ) + ( @maxGutterWidth * 2 ) );
+@maxRowWidth:             ( ( @maxColumnCount * @maxColumnWidth ) + ( ( @maxColumnCount - 1 ) * @maxGutterWidth ) + ( 2 * @maxMarginWidth ) );
+
+// Media box
+@mboxContentMarginWidth:    10px;
+@mboxImageMarginWidth:      10px;
+@mboxImagePaddingWidth:     10px;
+
+// Teasers
+@teaserHeaderSeparatorColor:          @greyLight;
+@teaserMarginHeight:                  10px;
+@teaserHeaderSeparatorHeightOver:     10px;
+@teaserHeaderSeparatorHeightUnder:    @teaserHeaderSeparatorHeightOver;
+
+// Tables and lists
+@zebraOddBackground:      @beigeLight;
+
+// Pages
+@pageImageBorderColor:          @white;
+@pageImageBorderWidth:          5px;
+@pageImageBorderStyle:          solid;
+@pageImageBorderShadow:         0px 0px 10px @greyMid;
+
+// Split Banner
+@controls:         15px;
+@textMargin:       20px;

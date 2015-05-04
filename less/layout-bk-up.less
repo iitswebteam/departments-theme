@@ -1,0 +1,227 @@
+// // All-col container
+// .container {
+//   width: @maxRowWidth;
+// }
+
+// // Single-col sidebars
+// .sidebar {
+//   width: @maxColumnWidth;
+// }
+
+///////////////////////////////
+// Shared style mixins
+
+//Main Content
+#main-content p {line-height: 1.5em;}
+#main-content > header {margin: 0;}
+
+.region-sidebar-first {margin-left: 0 !important;}
+.sidebar-first .content-inner,.two-sidebars .content-inner {margin: 0 !important;}
+.sidebar-first #main-content {
+  float: left;
+  width: 750px;
+  margin-left: 2%;
+}
+
+.one-sidebar #main-content {margin: 2% 2% 0 0; }
+.sidebar-first #main-content {
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+.two-sidebars #main-content  {
+  margin: 20px 2% 0 2%;
+  width: 500px;
+  float: left;
+}
+
+#page-title {
+  .font-size(21px);
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid @greyLightNav;
+}
+
+.front #page-title {
+  .font-size(28px);
+  border: none;
+}
+
+//Employment Table
+.view-employment-opportunities table {width: 100%;}
+.view-employment-opportunities table td,
+.view-employment-opportunities th {padding: 10px;}
+.view-employment-opportunities th {background: @greyLight;}
+.view-employment-opportunities .views-field-title th {border: 1px solid @white;}
+
+
+// Teasers
+.teaser {
+  .media-box();
+  //DEBUG
+  margin-bottom: @teaserMarginHeight;
+  margin-top: @teaserMarginHeight;
+  
+  // Title with separator underneath it
+  .article-title {padding: 10px 0 10px 0;}
+
+  h3.article-title {margin-top: 10px;}
+  // HACKY: Summary text in teasers may or may not be wrapped in <p>
+  // to have consistent space between summary text and the separator
+  // we'll null the margin of the first <p> and rely on .article-title's
+  // margin-bottom.
+  // NOTE: no first-of-type pseudo in IE<9
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+
+
+//Teasers on Homepage
+@media only screen and (min-width: 768px)  {
+  
+    .view-cta-homepage .views-row {
+        .font-size(14px;);
+        .viewsBlocks;
+        height: 280px;
+        padding-bottom: 10px;
+    }
+
+
+    .view-cta-homepage h3 {
+        .font-size(18px);
+        font-weight: bold;
+        margin: 2px 0 5px 0;
+        padding:0;
+    }
+
+    .view-cta-homepage h4 a {color: @blueDark;}
+    .view-cta-homepage h4 a:hover {color: @blueDesaturated;}
+
+    .view-cta-homepage .views-row-1 {background: @blueLight;}
+    .view-cta-homepage .views-row-2 {background: @purpleDesaturated;}
+    .view-cta-homepage .views-row-3 {background: @greenDark;}
+    .view-cta-homepage .views-row-4 {background: @orange;}
+    .view-cta-homepage .views-row-5 {background: @yellowLime;}
+    .view-cta-homepage .views-row-6 {background: @greyBeige;}
+
+    .view-cta-homepage  .views-row {margin-bottom:20px;}
+    .view-cta-homepage .views-row-3, #block-views-cta-home-block .views-row-6 {margin:0;}
+
+    .cta-coloured {padding:0 10px;}
+    .cta-coloured p {margin:0;}
+
+    #block-views-news-block,#block-views-events-block  {.viewsBlocks;}
+
+    #block-views-news-block  .block-title ,#block-views-events-block .block-title  {
+      font-weight: bold;
+      .font-size(18px);
+      margin-bottom: 5px;
+      background: @blueDesaturated;
+      padding: 8px;
+      color: @white;
+    }
+
+    .view-news .views-row, .view-id-events .views-row {
+      border-bottom: 1px solid @greyLight;
+      padding: 20px 0 20px 0;
+      height: 40px;
+      border-bottom: 1px dashed @greyMid;
+    }
+
+
+    //People page
+    .view-id-faculty .views-row,
+    .view-staff-co-op .views-row {
+      border-bottom: 2px solid @greyLight;
+      float: left;
+      margin: 0 20px 20px 0;
+      padding-bottom: 20px;
+      width: 362px;
+      height: 180px;
+    }
+
+    .view-id-faculty .views-row-even,
+    .view-staff-co-op .views-row-even {margin: 0;}
+    
+    .view-id-faculty h2,
+    .view-staff-co-op h2 {
+      color: @greyDark;
+      font-weight: bold;
+    }
+    .view-id-faculty img,
+    .view-staff-co-op img {
+      float: left;
+      margin-right: 20px;
+      width: 104px;
+    }
+
+    ul.info {
+      .marginPaddingZero;
+      .font-size(14px);
+      list-style-type: none;
+      float: left;
+      width: 205px;
+    }
+    ul.info li {line-height: 20px;}
+
+    li.full-bio {
+      height: 40px; 
+      margin-top:20px;
+    }
+
+    li.full-bio a {
+      font-weight: bold;
+      color: @greyDark;
+      background: @greyLight;
+      padding: 10px;
+      margin-top: 30px;
+      text-transform: uppercase;
+      .border-radius(2px);
+      text-shadow:0 1px 0 @white;
+    }
+
+    //list pages 
+    .field-name-field-page-list {border-top: 1px dashed @greyLight;}
+    .field-name-field-page-list p {.font-size(13px);}
+    
+
+    //contact us
+    .view-staff-contact .views-row {
+      .viewsBlocks(340px);
+      height: 130px;
+      border-bottom: 1px solid @greyLight;
+      margin-bottom: 20px;
+      line-height: 21px;
+    }
+
+    .view-staff-contact ul {
+      .marginPaddingZero;
+      list-style-type: none;
+    }
+
+    //sidebars
+    .region-sidebar-second {/*margin-top: 47px;*/} 
+
+    .view-id-news span.date-display-single {
+      background: @orange;
+      .border-radius(5px);
+      .font-size(16px);
+      color:@white;
+      display: block;
+      font-weight: bold;
+      float: left;
+      height: 40px;
+      margin-right: 8px;
+      padding: 5px;
+      text-align: center;
+      text-shadow: 1px 1px 1px #333, 0 0 0 #efefef, 1px 1px 1px #333;
+      text-transform: uppercase;
+      width: 40px;
+    } 
+
+}
+
+
+

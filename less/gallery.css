@@ -1,0 +1,89 @@
+/* Gallery 
+------------------------*/
+/* View */.view-gallery .views-row {
+  float: left;
+  margin: 0.5em 0 1em 0;
+  margin-right: 2.6%;
+  width: 230px;
+  min-height: 200px;
+  max-height: 200px;
+}
+.view-gallery .views-row.views-row-4 {
+  margin-right: 0;
+}
+.view-gallery .views-row {
+  -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+.view-gallery .views-row .views-field-title .field-content {
+  display: block;
+  padding: 0.5em;
+}
+/* Content */
+.article-photo-gallery .field-slideshow {
+  background-color: #ebebeb;
+  position: static !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin-bottom: 1em;
+}
+.article-photo-gallery .field-slideshow-slide {
+  width: 100% !important;
+}
+.article-photo-gallery .field-slideshow-image {
+  display: block;
+  margin: 1em auto 0 auto;
+  max-height: 350px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+}
+.article-photo-gallery .field-slideshow-caption {
+  margin: 1em;
+  text-align: center;
+}
+.article-photo-gallery .field-slideshow-controls {
+  z-index: 10;
+}
+.article-photo-gallery .field-slideshow-controls a {
+  display: inline-block;
+  width: 49.5%;
+  height: 30px;
+  padding: 0.5em 1.5em;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+  font-weight: bold;
+}
+.article-photo-gallery .field-slideshow-controls a.prev {
+  background: url('images/gallery-prev.png') no-repeat 0 0;
+}
+.article-photo-gallery .field-slideshow-controls a.next {
+  text-align: right;
+  background: url('images/gallery-next.png') no-repeat 100% 0;
+}
+.article-photo-gallery .field-slideshow-controls a:hover {
+  text-decoration: none;
+}
+.article-photo-gallery .field-slideshow-controls a.prev:hover {
+  background: url('images/gallery-prev-hov.png') no-repeat 0 0;
+}
+.article-photo-gallery .field-slideshow-controls a.next:hover {
+  text-align: right;
+  background: url('images/gallery-next-hov.png') no-repeat 100% 0;
+}
+.article-photo-gallery .field-slideshow-wrapper .item-list {
+  margin: 2em 0;
+}

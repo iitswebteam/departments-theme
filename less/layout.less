@@ -1,0 +1,691 @@
+// All-col container
+// .container {
+//   width: @maxRowWidth;
+// }
+
+
+// // Single-col sidebars
+// .sidebar {
+//   width: @maxColumnWidth;
+// }
+//sebastian's computer
+
+///////////////////////////////
+// Shared style mixins
+//layout starts
+
+.bold {font-weight: 700;}
+ul {list-style: inside;}
+ul li ul {padding-left: 20px;}
+ul li ul li {list-style: circle;}
+
+
+//Main Content
+.article-content p, 
+.field-name-field-bio p, 
+.field-name-field-research-interests p, 
+.field-name-field-teaching-interests p, 
+.field-name-field-awards-and-grants p, 
+.field-name-field-publications p,
+.field-name-field-affiliations p,
+.field-name-field-education p {line-height: 1.5em;}
+#main-content > header {margin: 0;}
+
+//add top margin to titles following a banner
+.field-name-field-list-page-image + .field-name-body h1,
+.field-name-field-list-page-image + .field-name-body h2,
+.field-name-field-list-page-image + .field-name-body h3,
+.field-name-field-list-page-image + .field-name-body h4,
+//due to image field machine name being different
+.field-name-field-image + .field-name-body h1,
+.field-name-field-image + .field-name-body h2,
+.field-name-field-image + .field-name-body h3,
+.field-name-field-image + .field-name-body h4
+  { margin-top: 1em}
+
+.region-sidebar-first {margin-left: 0 !important;}
+.sidebar-first .content-inner,.two-sidebars .content-inner {margin: 0 !important;}
+.sidebar-first #main-content {
+  float: left;
+  width: 750px;
+  margin-left: 2%;
+}
+
+.field-name-body {margin-right: 2.5%;}
+.two-sidebars .field-name-field-list-page-image,
+.two-sidebars .field-name-field-image {margin-right: 2%;}
+
+#main-content,
+.one-sidebar #main-content  {margin-top: 2%;}
+
+.sidebar-second #main-content  {margin-right: 2%;}
+
+.sidebar-first #main-content {
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+.two-sidebars #main-content  {
+  margin: 20px 2% 0 2%;
+  width: 500px;
+  float: left;
+}
+
+#page-title {
+  .font-size(21px);
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid @greyLightNav;
+}
+
+
+
+.float-left {
+  float:left;
+  width: 48%;
+  margin-right: 20px;
+}
+
+.float-right {float: right;}
+
+.field-name-field-page-image {margin: 0 10px 20px 0;}
+.teaser .field-name-field-page-image { margin:0;}
+
+// Teasers
+.teaser {
+  .media-box();
+  //DEBUG
+  margin-bottom: @teaserMarginHeight;
+  margin-top: @teaserMarginHeight;
+  
+  // Title with separator underneath it
+  .article-title {padding: 10px 0 10px 0;}
+
+  h3.article-title {margin-top: 10px;}
+  // HACKY: Summary text in teasers may or may not be wrapped in <p>
+  // to have consistent space between summary text and the separator
+  // we'll null the margin of the first <p> and rely on .article-title's
+  // margin-bottom.
+  // NOTE: no first-of-type pseudo in IE<9
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  .staff-image {
+    //for staff info
+    padding:0;
+    padding-right: 20px;
+  }
+  
+}
+
+//News Block
+.view-news-block ul {
+  .marginPaddingZero;
+  list-style-type: none;
+}
+.view-news-block ul li {display:none;}
+
+.view-news-block ul li:nth-child(-n+3) {
+  border-bottom: 1px dashed #666;
+  display:block;
+  padding: 15px 5px;
+}
+
+h2.block-title {
+  font-weight: bold;
+  .font-size(18px);
+  margin-bottom: 5px;
+  background: @blockTitleBlue;
+  padding: 8px;
+  color: @white;
+}
+
+.view-news-block .views-row a {.font-size(15px);}
+.view-news-block .views-row a:hover {text-decoration: underline;}
+
+//Person page
+//Body Image
+.field-name-field-portrait-image, .field-name-body img, .field-name-body .img_left {
+  float: left;
+  margin: @teaserMarginHeight;
+  margin-left:0;
+  margin-right: @teaserMarginHeight*2;
+}
+
+.field-name-body .img_right {
+  float: right;
+  margin-right:0;
+  margin-left: @teaserMarginHeight*2;
+}
+
+.field-name-body .img_center {
+  float:none;
+  display: block;
+  margin:0 auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.teaser .field-name-field-portrait-image { margin: 0;}
+//body img
+.field-name-body img {
+  border:5px solid @beigeLight; 
+  max-width: 250px;
+}
+
+.field-label-inline .field-items {line-height: 20px;}
+
+.article-type-person .group-left {
+  margin-right: @maxGutterWidth; //20px
+  width: auto;
+}
+.article-type-person .group-right {
+  float: left;
+  margin: 0 0 0 0;
+  width: auto;
+  max-width: 520px;
+}
+
+
+/*
+
+//future development for when we implement larger portrait image on person's profile
+// override 
+
+      .mydepartment .article-type-person .group-right {
+        max-width: 490px;
+        }
+
+*/
+.group-right .field  .field-label, .group_q_a span {.font-size(16px);}
+.group_q_a span {font-weight: bold;}
+
+.field-name-field-program .field-label,
+.field-name-field-education .field-label {.font-size(16px);}
+
+
+.article-type-person ul li, .article-type-page ul li {
+  line-height: 1.5em;
+  list-style-position: outside;
+  margin-left: .5em; 
+  padding-bottom: .2em;
+}
+
+.field-name-field-building .field-items,
+.field-name-field-room .field-items,
+.field-name-field-building, 
+.field-name-field-room,.field-name-field-building .field-item,
+.field-name-field-room .even {display: inline;}
+
+.field-name-field-affiliations {margin-top: 20px;}
+
+// inconsistent with teaching interests // .field-name-field-research-interests .field-items {padding-top: 10px; }
+
+.group-right .field-type-text-long, .group-right .field-name-field-cvs-resume, .group-right .field-name-field-cv-resume{
+  .greyBorderBottom;
+  font-weight: normal;
+}
+
+.group-right .field-name-field-faculty-video {
+  padding: 0.4em 0;
+}
+
+.group-right .field-name-field-status h2.field-label,
+.group-right .field-name-field-availability h2.field-label {
+  
+  font-family: arial;
+  .font-size(15px);
+  color: @greyDark;
+}
+
+.field-name-field-job-title .field-item {
+  .font-size(16px);
+  font-weight: bold;
+}
+
+.group-right .field-name-field-status {margin-top: 0;}
+
+.group-right .field-name-field-video {margin-top: 20px;}
+
+.group-right .group-main-info {
+  border-bottom: 1px dashed @greyLight;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.group_q_a,.field-name-field-question,
+.field-name-field-question-2,
+.field-name-field-question-3 {margin-top: 20px;}
+
+
+//Teasers on Homepage
+@media only screen and (min-width: 768px)  {
+  
+
+    #block-views-news-block,#block-views-events-block  {.viewsBlocks;}
+
+    #block-views-news-block  .block-title ,#block-views-events-block .block-title  {
+      font-weight: bold;
+      .font-size(18px);
+      margin-bottom: 5px;
+      background: @blueDesaturated;
+      padding: 8px;
+      color: @white;
+    }
+
+    .view-news .views-row, .view-id-events .views-row {
+      border-bottom: 1px solid @greyLight;
+      padding: 20px 0 20px 0;
+      height: 40px;
+      border-bottom: 1px dashed @greyMid;
+    }
+
+
+    //People page
+    .view-id-faculty .views-row, 
+    .view-staff-co-op .views-row,
+    .view-cross-appointed-faculty .views-row,
+    .view-adjunct-faculty  .views-row,
+    .view-faculty-of-computer-sciences .views-row,
+    .view-faculty-of-mathematics .views-row,
+    .view-faculty-of-statistics .views-row,
+    .view-health-studies-faculty .views-row,
+    .view-anthropology-faculty .views-row,
+    .view-graduate-faculty .views-row,
+    .view-people .views-row {
+      border-bottom: 2px solid @greyLight;
+      margin-right: 40px;
+      padding: 20px 0 10px 0;
+      width: 385px;
+      height: 180px; /* have to specify a height or page will not align*/
+      float: left;
+     }
+
+     //List layout
+     .view-faculty-name-list .views-row {
+      float:left;
+      height: 24px; 
+      width: 49%;
+    }
+
+    .view-id-faculty .views-row {height: 180px; position:relative; }
+    .view-id-faculty .views-row:hover {background: @whiteGrey;}
+
+    .big_link {position:absolute; top:0; left:0;}
+    .big_link > a {display:block; }
+    .big_link > a:hover { text-decoration: none;}
+    .big_link, .big_link > a {height:209px; width:340px; margin:0; padding: 0;}
+
+    .sidebar-first .view-id-faculty .views-row,
+    .sidebar-first .view-staff-co-op .views-row,
+    .sidebar-first .view-cross-appointed-faculty .views-row,
+    .sidebar-first .view-adjunct-faculty  .views-row,
+    .sidebar-first .view-faculty-of-computer-sciences .views-row,
+    .sidebar-first .view-faculty-of-mathematics .views-row,
+    .sidebar-first .view-faculty-of-statistics .views-row,
+    .sidebar-first .view-health-studies-faculty .views-row,
+    .sidebar-first .view-anthropology-faculty .views-row,
+    .sidebar-first .view-graduate-faculty .views-row, 
+    .sidebar-first .view-people .views-row {width: 345px;}
+
+    .view-students .views-row {
+      border-bottom: 1px dashed @greyLight;
+      margin-bottom: 20px;
+      min-height: 150px;
+    }
+
+    .view-students {margin-right: 20px;}
+
+    .view-id-faculty .views-row-even,
+    .view-staff-co-op .views-row-even,
+    .view-cross-appointed-faculty .views-row-even,
+    .view-adjunct-faculty .views-row-even,
+    .view-faculty-of-computer-sciences .views-row-even,
+    .view-faculty-of-mathematics .views-row-even,
+    .view-faculty-of-statistics .views-row-even,
+    .view-health-studies-faculty .views-row-even,
+    .view-anthropology-faculty .views-row-even,
+    .view-graduate-faculty .views-row-even,
+    .view-people .views-row-even  {margin: 0;}
+
+    .view-id-faculty h2,
+    .view-staff-co-op h2,
+    .view-adjunct-faculty h2,
+    .view-cross-appointed-faculty h2,
+    .view-faculty-of-computer-sciences h2,
+    .view-faculty-of-mathematics h2,
+    .view-faculty-of-statistics h2,
+    .view-health-studies-faculty h2,
+    .view-anthropology-faculty  h2,
+    .view-graduate-faculty h2,
+    .view-people h2  {
+      color: @greyDark;
+      font-weight: bold;
+    }
+
+    .view-id-faculty img,
+    .view-staff-co-op img,
+    .view-adjunct-faculty img, 
+    .view-cross-appointed-faculty img,
+    .view-students  img, 
+    .view-faculty-of-computer-sciences img,
+    .view-faculty-of-mathematics img,
+    .view-faculty-of-statistics img,
+    .view-health-studies-faculty img,
+    .view-anthropology-faculty img,
+    .view-graduate-faculty img, 
+    .view-people img,
+    .view-id-contact_info img{
+      float: left;
+      margin-right: 13px;
+      width: 104px;
+    }
+
+    ul.info {
+      .marginPaddingZero;
+      .font-size(14px);
+      list-style-type: none;
+      float: left;
+      width: 205px;
+    }
+    ul.info li {line-height: 20px;}
+
+    li.full-bio {
+      height: 40px; 
+      margin-top:20px;
+    }
+
+    li.full-bio a {
+      font-weight: bold;
+      color: @greyDark;
+      background: @greyLight;
+      padding: 10px;
+      margin-top: 30px;
+      text-transform: uppercase;
+      .border-radius(2px);
+      text-shadow:0 1px 0 @white;
+    }
+
+     //contact us
+
+    .view-contact-info  .views-row,
+    .view-teaching-technichians .views-row,
+    .view-administration .views-row {
+      .viewsBlocks (45%;);
+      margin-bottom: 20px;
+      float: left;
+      border-bottom: 1px dashed #ccc;
+      height: 160px;
+     }
+
+    .view-contact-info .no-photo,
+    .view-teaching-technichians .no-photo,
+    .view-administration .no-photo {height:120px;}
+
+    #block-views-contact-info-block .block-inner {margin-top: -10px;}
+
+    .view-contact-info  ul,
+    .view-teaching-technichians ul,
+    .view-administration ul {
+      .marginPaddingZero;
+      list-style-type: none;
+    }
+
+    .two-sidebars .view-contact-info .views-row,
+    .two-sidebars .view-teaching-technichians .views-row,
+    .two-sidebars .view-administration .views-row {
+        float: none;
+        width: 100%;
+    }
+
+
+
+    //Program Listings 
+   
+    .field-name-field-page-list {border-top: 1px dashed @greyLight;}
+    .front .field-name-field-page-list {border-top: none;}
+
+    .field-name-field-page-list p {.font-size(15px);}
+
+    .field .field-label {.font-size(15px);}
+    
+    //sidebars
+    .not-front .region-sidebar-second {margin-top: 30px;}
+    .two-sidebars .region-sidebar-second {margin-top: 35px;}
+
+    .view-id-news span.date-display-single {
+      background: @orange;
+      .border-radius(5px);
+      .font-size(16px);
+      color:@white;
+      display: block;
+      font-weight: bold;
+      float: left;
+      height: 40px;
+      margin-right: 8px;
+      padding: 5px;
+      text-align: center;
+      text-shadow: 1px 1px 1px #333, 0 0 0 #efefef, 1px 1px 1px #333;
+      text-transform: uppercase;
+      width: 40px;
+    } 
+
+}
+
+//Employment page 
+
+#block-block-1 p,.employment-msg a  {.font-size(14px);} //as seen in ACM
+
+.employment-msg {
+  border-top: 1px dashed #ccc;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.emergency-posting {color: @red;}
+.field-name-field-emergency-posting {font-weight: bold;}
+
+ul.quicktabs-tabs  {margin: 5px 0 5px 0;}
+
+ul.quicktabs-tabs li {
+  border-right: 1px solid @greyLight;
+  padding: 13px 12px;
+  margin-left: 1px;
+
+}
+
+.block-quicktabs h2 {.font-size(17px);}
+
+#quicktabs-job_opportunities a {
+  background: @blueLighter;
+  color: @greyDark;
+  font-weight: bold;
+  padding: 15px 24px;
+ text-shadow:1px 1px 0px @white;
+}
+
+#quicktabs-job_opportunities a:hover {text-decoration: none;}
+
+#quicktabs-container-job_opportunities a {
+    background: none;
+    .font-size(13px);
+    font-weight: none;
+    padding: 15px 18px;
+}
+
+
+.quicktabs-style-nostyle .item-list li.active a {color: @greyDark;}
+
+.quicktabs-style-nostyle .item-list li.active {
+  background: @white;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.quicktabs-style-nostyle .item-list {
+  background: @greylightbg;
+  border-bottom:1px solid @greyLight;
+  border-top: 1px solid @white;
+  margin-top: 15px;
+  padding: 8px 0;
+}
+
+.quicktabs-style-nostyle .views-row {
+  background:@white;
+  .font-size(13px);
+  padding: 20px;
+  
+}
+
+.quicktabs-style-nostyle  .view-empty {
+  background:@white;
+  padding: 10px;
+
+}
+
+.quicktabs-style-nostyle .block-inner {margin: 0;}
+
+.quicktabs-style-nostyle h2.job-title a {
+  color:@blueDark;
+  .font-size(15px);
+  font-weight: 100;
+  padding: 0;
+  
+}
+
+#quicktabs-container-job_opportunities h2.job-title a:hover {text-decoration: underline;}
+
+//FAQ
+
+.view-faq .ui-widget {
+  font-family: sans-serif;
+  .font-size(14px);
+}
+
+.view-faq {border:1px solid @greyLight;}
+.view-faq .views-row {.font-size(14px);}
+.view-faq .ui-accordion-header .views-accordion-header {border:1px solid @greyMid;}
+
+.view-faq  .ui-accordion .ui-accordion-header a  {.font-size(15px);}
+
+.view-faq .ui-accordion-icons .ui-accordion-header a {padding-left: 1.9em;}
+
+
+.view-faq .ui-corner-all,.view-faq .ui-corner-top  {.border-radius(0);}
+.view-faq .ui-accordion .ui-accordion-content {background: @whiteOff;}
+
+.view-faq .ui-state-active a {
+  background: @blueLighter;
+  color: @greyMid;
+  font-weight: bold;
+}
+
+.view-faq .ui-accordion-content-active {border-top: none !important;}
+.view-faq .ui-state-active {border:none;}
+
+.view-faq .ui-state-default {
+  background: @whiteGrey;
+  border:none;
+}
+
+//Job Opportunity
+
+.field-name-field-emergency-posting {color:@red;}
+
+#node_job_posting_full_group_info {
+  border-bottom: 1px solid @greyLight;
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.article-job-posting .field-label {
+  color:@greyDark;
+  font-family: sans-serif;
+}
+
+//Admin View
+
+#user-login .form-item .description {
+  background: 0;
+  padding:5px;
+
+}
+
+// DPES Custom People Listing - Joseph Stewart//
+.view-people-zebra-list ul.info{
+  width: 100%;
+}
+.view-people-zebra-list ul h2{
+    .font-size(@bodyFontSize);
+}
+
+.view-people-zebra-list ul li{
+  display:inline-block;
+  //width:100px;
+}
+.view-people-zebra-list ul li.name/*, .view-people-zebra-list ul li.roles*/{
+  margin-right: 20px;
+  width: 240px;
+}
+.view-people-zebra-list ul li.disciplines{
+  width:180px;
+}
+.view-people-zebra-list .big_link_zebra {padding: 0.5em 0 1.85em 0.85em;}
+.view-people-zebra-list .big_link_zebra > a {display:block; }
+.view-people-zebra-list table tbody tr td:hover {background: @whiteGrey;}
+
+.view-people-zebra-list table tbody tr td{padding:0; margin:0.5em;}
+
+.view-people-zebra-list ul.table-header {
+  margin-left: 0.75em;
+  padding:0;
+}
+
+//MGMT Social Media Block - Joseph Stewart//
+#block-block-3{
+  background-color: #ebebeb;
+}
+.mgmt-social-media-icon{
+  float:left;
+  padding: 10px 5px 10px 10px;
+  width: 37px;
+  height:37px;
+
+}
+
+.mgmt-social-media-link-txt{
+  float:left;
+  height:37px;
+  width: 165px;
+  padding: 10px 5px;
+
+}
+.mgmt-social-media-link-txt a{
+  line-height: 37px;
+}
+
+//Media Youtube Formatting update - responsive youtube video - Sebastian Toncu
+
+.media-youtube-video {
+    position: relative;
+    height: 0; overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+}
+.media-youtube-video iframe,
+.media-youtube-video object,
+.media-youtube-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//banner block margin 0 - 0 the block margins when static image banner is not present
+
+#block-views-static-banner-block .block-inner {margin:0}
+#block-views-static-banner-block .field-type-image img { margin: 10px 0}
+.two-sidebars #block-views-static-banner-block .field-type-image { max-width:490px} //adding space to the right

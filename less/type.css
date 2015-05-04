@@ -1,0 +1,8 @@
+.boldUppercase {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#page {
+  font-size: 15px;
+}

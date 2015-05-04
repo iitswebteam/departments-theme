@@ -1,0 +1,95 @@
+/*
+
+
+**************************  Table Style   **************************
+
+
+*/
+
+	table { 
+					margin:.5em auto;
+					padding: 0em;
+					border:none;
+					background:#fff;
+					width:100%;
+					font-size:100%;
+					margin-bottom:1em;
+					empty-cells: show;
+				}
+				
+	table tbody tr td {padding:.5em; border:none; vertical-align:top; text-align:left }	
+	table tbody tr { border-bottom: 1px solid #ccc; padding: 0.1em 0.6em;}
+	
+	table thead th { padding:.5em; background:#f4f4f4; width:16.66%; border:none; text-transform:uppercase; border-top: 3px solid #ccc; border-bottom: 3px solid #ccc; padding-top:1em}
+	
+	caption { 	
+				text-align:left;
+				font-weight:bold;  
+				text-transform:capitalize;
+				padding:.5em 0 .5em 0em; 
+				margin:0;
+				/*border-bottom:3px solid #d0e0e8;*/
+				color:#4c6687;
+				}
+				
+	table tbody { margin-top:1em;}
+				
+	
+	table tr td {
+						font-weight:normal;
+						text-align:left;
+						padding:.1em;
+						/*color:#002a5c;*/
+						background:#f4f4f4;
+						.font-size(14px);
+				  }
+	table tr:nth-of-type(odd) td { background:#eee;}
+				  /*.tableform tr td:hover { background:#e1e1e1;}
+	table tr td:active { background:#D5FFCF;}			  
+				
+				*/
+table tr td.bold { font-weight:bold; font-size:100%;}
+table tr td.bold:active, .tableform tr td.bold:hover {background:#EEE;}
+
+tr td:empty {
+    visibility: hidden;
+	display:none;
+    height: 0;
+}
+
+tr td:not(:empty) ~ td:empty {
+    visibility: visible;
+	display:table-cell;
+    height: 100%;
+}
+
+/*
+
+
+**************************  TABLE END ///// **************************
+
+
+*/
+
+// Table Style for Employment page 
+
+#block-views-employment-block table thead th,
+#block-views-employment-block tr.even, #block-views-employment-block tr.odd {border:none;}
+#block-views-employment-block td {
+	border-right: 1px solid @greyLight;
+	padding: 15px;
+}
+
+#block-views-employment-block tr > td:last-of-type {border:none;}
+
+#block-views-employment-block  tr:nth-of-type(odd) td  {background: @blueLighter;}
+
+#block-views-employment-block table thead th {
+	background: @grey;
+	text-align: center;
+	width:auto;
+}
+
+#block-views-employment-block thead {text-align: center;}
+#block-views-employment-block table {border-bottom: 1px solid @greyLight;}
+#block-views-employment-block span.uppercase {text-transform: uppercase;}

@@ -1,0 +1,94 @@
+///////////////////////////////
+// Images
+
+// Border on pages' feature images
+.field-type-image img {
+  .box-shadow( @pageImageBorderShadow );
+  border-color: @pageImageBorderColor;
+  border-width: @pageImageBorderWidth;
+  border-style: @pageImageBorderStyle;
+}
+/*
+.two-sidebars .field-name-field-list-page-image  img {width: 490px;}
+*/
+// No border on images in teasers
+.teaser {
+  .field-type-image img {
+    .box-shadow( none );
+    border: none;
+  }
+}
+
+// Feature images fill the container
+/*.field-name-field-image,
+.field-name-field-list-page-image,
+.field-name-field-page-image {
+  img {
+    width: 99%;
+  }
+}*/
+
+///////////////////////////////
+// Person
+
+.article-type-person {
+
+}
+
+.teaser {
+  // following fields should only occur inside .article-type-person.teaser
+  .field-name-field-building,
+  .field-name-field-building div,
+  .field-name-field-room,
+  .field-name-field-room div {
+    display: inline;
+  }
+}
+
+///////////////////////////////
+// List Page
+
+.article-list-page {
+
+}
+
+// List of items 
+.field-name-field-page-list, .field-name-field-person-list, .field-name-field-resources {
+  .odd {
+    background-color: @zebraOddBackground;
+  }
+}
+
+
+///////////////////////////////
+// Person Page List
+
+.article-person-list-page {
+
+}
+
+// List of persons
+// .field-name-field-person-list {
+//   & > .field-items {
+//     // each Person in the list
+//     & > .field-item {
+//       display: inline-block;
+//       vertical-align: top;
+//       width: @max2ColumnWidth;
+//     }
+//     // every other Person in the list
+//     & > .even {
+//       margin-right: @maxGutterWidth;
+//     }
+//   }
+// }
+
+
+///////////////////////////////
+// Page
+
+.article-type-page {
+
+}
+
+

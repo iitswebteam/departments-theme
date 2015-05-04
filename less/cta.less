@@ -1,0 +1,80 @@
+/*sidebar CTA*/
+
+/*.region-sidebar-second p {font-size:0.75em;}*/
+.cta-wrap {
+	position: relative;
+	margin-bottom: @CTAblockMargin;
+}
+
+.cta-wrap h3 a,
+.cta-wrap h3, 
+.view-cta-homepage h3,
+.view-cta-homepage h3 a  {
+  color: @blueDark;
+  .font-size(16px);
+  font-weight:bold;  
+}
+
+/*CTA*/
+
+
+.cta-img {height: 138px;}
+
+.description {
+    background: @greenYellow;
+    padding: @CTApadding; 
+}
+
+.description p {margin-bottom: 0;}
+
+.cta-coloured { 
+
+    padding: @CTApadding; 
+    height: 150px;
+}
+
+.view-cta-homepage h3 a:hover, .cta-wrap h3 a:hover {
+	color:@blueDesaturated;
+	text-decoration: none;
+}
+
+
+
+.view-cta-homepage .views-row {
+    .viewsBlocks;
+}
+
+
+.front .view-cta-homepage .views-row-1 {background: @blueLight;}
+.front .view-cta-homepage .views-row-2 {background: @purpleDesaturated;}
+.front .view-cta-homepage .views-row-3 {background: @greenDark;}
+.front .view-cta-homepage .views-row-4 {background: @orange;}
+.front .view-cta-homepage .views-row-5 {background: @yellowLime;}
+.front .view-cta-homepage .views-row-6 {background: @greyBeige;}
+
+
+.front .view-cta-homepage .views-row-3,
+.front #block-views-cta-home-block .views-row-6,
+.front .view-cta-homepage .views-row-last {margin:0;}
+
+.view.view-cta-homepage .views-row-4,
+.view.view-cta-homepage .views-row-5, 
+.view.view-cta-homepage .views-row-6 {margin-top: @CTAblockMargin;}
+
+//BIOSCI- To accomodate to only image and title for homepage CTAs
+.biosci-cta-home .cta-coloured {height: 20px;} 
+
+
+
+//CTA - teaser style
+
+.view-cta-teaser .views-row { 
+    margin-bottom: @teaserMarginHeight;
+    margin-top: @teaserMarginHeight;}
+.view-cta-teaser .views-field-field-cta-image { 
+    float: left;
+    padding: @mboxImagePaddingWidth;
+    padding-right: @mboxImagePaddingWidth*2;}
+
+.view-cta-teaser .views-row-odd {background:@beigeLight;}
+.cta-teaser { padding-top: @maxMarginWidth;}

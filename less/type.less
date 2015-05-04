@@ -1,0 +1,23 @@
+///////////////////////////////
+// Type
+//test
+@rootFontSize:        62.5%; // 62.5% of browser default (typically 16px) → 10px
+@bodyFontSize:        15px; // As seen in Admissions
+
+@fontFamily:          sans-serif; // sans-serif → Arial/Windows, Helvetica/OSX
+
+// Headers
+@headerFontFamily:    "Trebuchet MS", sans-serif;
+@headerFontWeight:    normal;
+
+//Variables
+.boldUppercase {  
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+//Set the font-size for #page to fix Chrome issue
+#page {
+	.font-size(15px);
+}

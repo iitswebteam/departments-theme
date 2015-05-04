@@ -1,0 +1,48 @@
+#article-205 #webform-client-form-205 #edit-submit-draggable-wrapper {
+  top: 1875px;
+}
+#article-205 .arrange-fields-container-webform-client-form-205 {
+  height: 1900px;
+}
+#article-205 #webform-client-form-205 #edit-captcha-draggable-wrapper {
+  position: absolute;
+  top: 1670px;
+}
+/*
+#article-205 .webform-client-form {
+	margin:1em 0;
+	padding: .5em;
+	border:1px solid #d0e0e8;
+	background:#fff;
+	color:#002a5c;
+	}
+/*
+#article-205 .webform-client-form .arrange-fields-element-type-textfield { 	
+					margin:.3em .5em; 
+					padding:.2em 0; 
+					position:relative;
+					}
+
+
+#article-205 .webform-client-form input, #article-205 .webform-client-form textarea { padding:.2em; color:#222; color:#002a5c; }
+.webform-client-form input[type="submit"],.webform-client-form input[type="reset"] { border-color:#002a5c; }
+.webform-client-form input[type="submit"]:hover,.webform-client-form input[type="reset"]:hover {color:#673802;}
+.webform-client-form input:hover, .webform-client-form textarea:hover { border-color:#673802; }
+.webform-client-form input:focus, .webform-client-form textarea:focus { background:#faf8ee url(../../images/yellow_gradient.gif) repeat bottom; border-color:#673802; color:#673802; font-weight:normal; }
+.webform-client-form textarea:focus { background-image:none;}
+
+.webform-client-form .required { color:#900; padding-left:1em; display:block; font-style:italic; font-size:.9em; margin-bottom:1em; margin-top:0;}
+
+.webform-client-form .first { margin-top:1em;}
+
+.webform-client-form .date { width:20px; padding-left:0;}
+.webform-client-form .date a { display:block; background: url(../images/calendar-icon.gif) no-repeat left top; width:20px; height:20px; }
+
+/* end hack */
+/* radio buttons and check boxes 
+
+	.webform-client-form .clear { clear:both;}
+	
+	
+	.webform-client-form h4 span { color:#900; display:block; font-style:italic;}
+*/

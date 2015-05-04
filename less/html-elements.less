@@ -1,0 +1,44 @@
+html {
+  font-size: @rootFontSize;
+}
+
+body {
+  .font-size( @bodyFontSize );
+  background-color: @bodyBackground;
+  color: @textColor;
+  font-family: @fontFamily;
+ 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @headerColor;
+  font-family: @headerFontFamily;
+  font-weight: @headerFontWeight;
+}
+h2#dept_title{
+  .font-size(@bodyFontSize * 2);
+}
+
+p {
+  .font-size(@bodyFontSize);
+}
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: @linkHoverColor;
+    text-decoration: underline;
+  }
+  &:visited { color: @linkVisitedColor; }
+}
+
+table tr td{
+  .font-size(14px);
+}
