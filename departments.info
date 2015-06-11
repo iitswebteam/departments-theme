@@ -231,7 +231,3 @@ core = "7.x"
 project = "utsc_department_adaptivetheme_subtheme"
 datestamp = "1339984272"
 
-breakpoints[wide] = (min-width: 980px)
-breakpoints[normal] = (min-width: 768px)
-breakpoints[narrow] = (min-width: 480px)
-breakpoints[mobile] = (min-width: 0px)

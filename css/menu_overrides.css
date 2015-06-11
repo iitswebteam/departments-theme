@@ -1,0 +1,9 @@
+#global_header nav { display: block;}
+#global_header .collapse-button {height:31px; right:12px;}
+.menu-superfish-collapser: {background-color:none;}
+
+  #menu-bar {
+    position: absolute;
+    top:-80px;
+    right:0;
+  }
