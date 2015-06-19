@@ -101,7 +101,8 @@ ul li ul li {
 .field-name-field-awards-and-grants p,
 .field-name-field-publications p,
 .field-name-field-affiliations p,
-.field-name-field-education p {
+.field-name-field-education p,
+.cta-teaser p {
   line-height: 1.5em;
 }
 #main-content > header {
