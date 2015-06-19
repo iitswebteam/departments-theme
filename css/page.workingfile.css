@@ -1837,9 +1837,11 @@ input[type=submit] {
     top: 100px;
     left: 25px;
   }
+  /* this makes the picture touch the text on teaser page view on mobile
+  
   .teaser .field-type-image {
     padding-right: 0;
-  }
+  }*/
   .teaser .field-name-field-list-page-image img {
     width: 180px;
     margin-right: 20px;
@@ -2262,9 +2264,14 @@ input[type=submit] {
   #main-content .block-inner {
     margin-top: -1em;
   }
+  /*
+
+  teaser view was too spread out - style was inconsistent with the CTA teaser view on mobile
+
+
   #main-content .field-name-body p {
     line-height: 2em;
-  }
+  }*/
   #main-content {
     padding: 0 .5em;
   }
