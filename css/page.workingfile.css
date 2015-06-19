@@ -2503,7 +2503,7 @@ input[type=submit] {
     height: 126px;
   }
   #menu-bar ul li {
-    width: 25%;
+    /*width: 25%; we don't need this effect on buttons for tablet*/
     border-bottom: 1px solid #fff;
     border-top: none;
   }
@@ -2635,7 +2635,7 @@ input[type=submit] {
     width: 90%;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
 
