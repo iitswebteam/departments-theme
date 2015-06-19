@@ -2635,7 +2635,7 @@ input[type=submit] {
     width: 90%;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
 
@@ -3010,3 +3010,7 @@ input[type=submit] {
     float: left;
   }
 }
+
+/*fixes the slideshow banner overlapping with the page text on tablet layout*/
+
+.front .region-highlighted { height: 250px}
