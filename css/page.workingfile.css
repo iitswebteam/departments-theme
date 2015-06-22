@@ -2478,9 +2478,7 @@ input[type=submit] {
   .cta-wrap img {
     width: 100%;
   }
-  .cta-wrap {
-    width: 230px;
-  }
+ 
   .region-sidebar-second .view-cta-sidebar {
     margin: 0 .5em 0 .5em;
   }
@@ -2491,7 +2489,10 @@ input[type=submit] {
 
 /*fixes width of messages under CTA being the size of the box*/
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-.cta-wrap { width: 230px}
+.cta-wrap { 
+    width: 230px;
+    float: left;
+    margin-right: 20px;}
 }
 
 
@@ -2651,10 +2652,6 @@ input[type=submit] {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
   
-  #columns .region-sidebar-second {
-    width: 24%;
-    margin-left: -25%;
-  }
 
   #menu-bar ul li ul {
     margin: 0;
@@ -3025,6 +3022,11 @@ input[type=submit] {
     margin: 20px 2% 0 2%;
     width: 500px;
     float: left;
+  }
+
+  #columns .region-sidebar-second {
+    width: 23%;
+    margin-left: -23%;
   }
   
 }
