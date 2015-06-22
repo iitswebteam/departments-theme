@@ -2489,6 +2489,13 @@ input[type=submit] {
   }
 }
 
+/*fixes width of messages under CTA being the size of the box*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+.cta-wrap { width: 230px}
+}
+
+
+
 /* banner image */
 
   #block-views-slideshow-banner-block img { width:100% !important}
@@ -2497,10 +2504,10 @@ input[type=submit] {
   .cta-wrap {
     float: left;
     margin-right: 2%;
-    width: 210px;
+    /*width: 210px;*/
   }
   .cta-img {
-    height: 126px;
+    /*height: 126px;*/
   }
   #menu-bar ul li {
     /*width: 25%; we don't need this effect on buttons for tablet*/
@@ -2514,6 +2521,7 @@ input[type=submit] {
     padding: 0;
     z-index: 200;
   }
+
 }
 @media only screen and (min-width: 600px) {
   /* TOP MENU */
@@ -2634,10 +2642,19 @@ input[type=submit] {
   .sidebar-first #main-content {
     width: 90%;
   }
+  #columns .region-sidebar-second {
+    width: 24%;
+    margin-left: -25%;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
+  
+  #columns .region-sidebar-second {
+    width: 24%;
+    margin-left: -25%;
+  }
 
   #menu-bar ul li ul {
     margin: 0;
@@ -2672,11 +2689,10 @@ input[type=submit] {
     width: 500px;
     float: left;
   }
-  .sidebar-second #main-content {
-    margin-right: 0;
-  }
+
   .sidebar-second #main-content {
     margin-right: 2%;
+    margin-left: 1%;
   }
   #block-views-news-block,
   #block-views-events-block {
@@ -2945,16 +2961,17 @@ input[type=submit] {
     padding: 0;
     z-index: 200;
   }
-}
-@media only screen and (min-width: 900px) {
-
   #menu-bar {
     border-bottom: 1px solid #002554;
     height: 40px;
   }
-  .cta-img {
-    height: 138px;
+}
+@media only screen and (min-width: 900px) {
+  #menu-bar {
+    border-bottom: 1px solid #002554;
+    height: 40px;
   }
+  
   .view-slideshow-banner {
     height: 240px;
   }
@@ -3009,8 +3026,14 @@ input[type=submit] {
     width: 500px;
     float: left;
   }
+  
 }
-
+@media only screen and (min-width: 1024px) {
+.cta-img {
+    height: 138px;
+  }
+}
 /*fixes the slideshow banner overlapping with the page text on tablet layout*/
 
 .front .region-highlighted { height: 250px}
+/**/
