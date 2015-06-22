@@ -2467,11 +2467,7 @@ input[type=submit] {
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 250px;
   }
-  .view-cta-homepage .views-row {
-    float: none;
-    margin: 0 0 20px 25px;
-    width: 230px;
-  }
+
   .cta-img {
     height: auto;
   }
@@ -2480,7 +2476,7 @@ input[type=submit] {
   }
  
   .region-sidebar-second .view-cta-sidebar {
-    margin: 0 .5em 0 .5em;
+    margin-right: 0 .5em 0 0;
   }
   .description {
     margin-top: -3px;
@@ -2489,10 +2485,25 @@ input[type=submit] {
 
 /*fixes width of messages under CTA being the size of the box*/
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-.cta-wrap { 
+  .cta-wrap, .view-cta-homepage .views-row { 
     width: 230px;
     float: left;
     margin-right: 20px;}
+
+  .front .view-cta-homepage .views-row-1,
+  .front .view-cta-homepage .views-row-3,
+  .front .view-cta-homepage .views-row-5,
+  {
+    margin-right:20px;
+  }
+
+
+
+#main-content, .region-sidebar-second {
+    padding: 0 .5em;
+  }
+
+
 }
 
 
@@ -2648,6 +2659,12 @@ input[type=submit] {
     margin-left: -25%;
   }
 }
+
+/* fixes no margin for the 3rd (green) CTA on homepage main page area on responsive*/
+@media only screen and (min-width: 600px) and (max-width: 998px) {
+.front .region-content .view-cta-homepage .views-row-3 { margin-top:20px; margin-right:3.2%;}
+}
+
 @media only screen and (min-width: 768px) {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
@@ -2993,14 +3010,14 @@ input[type=submit] {
     background: #eee;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 999px) {
   .views-field-field-banner img {
     z-index: -1;
   }
   .views-slideshow-controls-bottom {
     position: absolute;
     top: 195px;
-    right: 5px;
+    right: 45px;
     padding: 0;
     z-index: 200;
   }
@@ -3025,7 +3042,7 @@ input[type=submit] {
   }
 
   #columns .region-sidebar-second {
-    width: 23%;
+    width: 22%;
     margin-left: -23%;
   }
   
@@ -3033,6 +3050,9 @@ input[type=submit] {
 @media only screen and (min-width: 1024px) {
 .cta-img {
     height: 138px;
+  }
+.views-slideshow-controls-bottom {
+    right: 5px;
   }
 }
 /*fixes the slideshow banner overlapping with the page text on tablet layout*/
