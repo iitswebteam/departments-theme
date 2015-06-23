@@ -3071,5 +3071,6 @@ input[type=submit] {
 /*needs to override the wider range specified for cta margin row-3*/
 @media only screen and (min-width: 756px) and (max-width: 767px) {
   .front .region-content .view-cta-homepage .views-row-3 { margin-right:0px; margin-top: 0px}
+  .views-row-3 .cta-wrap { margin-right:0} /*3rd CTA doesn not need a margin, so it has space to line up in 1 row on tablet. A margin would make it jump underneath*/
 }/* when 3 CTA are inline on main home page area, the 3rd CTA should be allined*/
 
