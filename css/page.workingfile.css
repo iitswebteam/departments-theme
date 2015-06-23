@@ -2489,13 +2489,6 @@ input[type=submit] {
     margin-right: 20px
     }
 
-  .front .view-cta-homepage .views-row-1,
-  .front .view-cta-homepage .views-row-3,
-  .front .view-cta-homepage .views-row-5,
-  {
-    margin-right:14px;
-  }
-
   .front .view-cta-homepage .views-row-3 { margin-right:20px; margin-top: 20px}
   
   .region-sidebar-second .view-cta-sidebar {
@@ -3073,4 +3066,8 @@ input[type=submit] {
   .front .region-content .view-cta-homepage .views-row-3 { margin-right:0px; margin-top: 0px}
   .views-row-3 .cta-wrap { margin-right:0} /*3rd CTA doesn not need a margin, so it has space to line up in 1 row on tablet. A margin would make it jump underneath*/
 }/* when 3 CTA are inline on main home page area, the 3rd CTA should be allined*/
-
+/* fixes margin top for 2nd and 4th homepage CTA */
+@media only screen and (min-width: 479px) and (max-width: 514px) {
+  .front .view-cta-homepage .views-row-2, 
+  .front .view-cta-homepage .views-row-4 { margin-top: 20px}
+}
