@@ -118,8 +118,8 @@ ul li ul li {
 .field-name-field-image + .field-name-body h4 {
   margin-top: 1em;
 }
-.region-sidebar-first {
-  margin-left: 0 !important;
+.not-front .region-sidebar-first {
+  margin-left: 0;
 }
 .sidebar-first .content-inner,
 .two-sidebars .content-inner {
@@ -2952,6 +2952,12 @@ input[type=submit] {
 
 
 }
+@media only screen and (max-width: 999px) {
+/*adds margin for breadcrumb and navigation for all layouts below desktop size*/
+#breadcrumb, .not-front .region-sidebar-first 
+  { margin-left: 2%; }
+}
+
 @media only screen and (min-width: 800px) and (max-width: 999px) {
   /*--- Slideshow ---*/
   .views-field-field-banner img {
