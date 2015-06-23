@@ -2954,8 +2954,9 @@ input[type=submit] {
 }
 @media only screen and (max-width: 999px) {
 /*adds margin for breadcrumb and navigation for all layouts below desktop size*/
-#breadcrumb, .not-front .region-sidebar-first 
+  #breadcrumb, .not-front .region-sidebar-first 
   { margin-left: 2%; }
+  .view-static-banner img { width: 99%} /* fixes static banner not touching edge of screen on smaller screens*/
 }
 
 @media only screen and (min-width: 800px) and (max-width: 999px) {
@@ -2987,6 +2988,8 @@ input[type=submit] {
     border-bottom: 1px solid #002554;
     height: 40px;
   }
+  .view-static-banner img { width: 98%} /* fixes static banner not touching edge of screen on smaller screens*/
+  .not-front .sidebar-second #main-content { width:89%} /* fixes static banner touching CTA on tablet*/
 }
 @media only screen and (min-width: 900px) {
   #menu-bar {
