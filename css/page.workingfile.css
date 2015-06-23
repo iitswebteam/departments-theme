@@ -2475,9 +2475,7 @@ input[type=submit] {
     width: 100%;
   }
  
-  .region-sidebar-second .view-cta-sidebar {
-    margin-right: 0 .5em 0 0;
-  }
+
   .description {
     margin-top: -3px;
   }
@@ -2488,24 +2486,28 @@ input[type=submit] {
   .cta-wrap, .view-cta-homepage .views-row { 
     width: 230px;
     float: left;
-    margin-right: 20px;}
+    margin-right: 20px
+    }
 
   .front .view-cta-homepage .views-row-1,
   .front .view-cta-homepage .views-row-3,
   .front .view-cta-homepage .views-row-5,
   {
-    margin-right:20px;
+    margin-right:14px;
   }
 
-
-
-#main-content, .region-sidebar-second {
+  .front .view-cta-homepage .views-row-3 { margin-right:20px; margin-top: 20px}
+  
+  .region-sidebar-second .view-cta-sidebar {
+    margin:0 .5em;
+  }
+  .cta-wrap .cta-img {height: 138px} /* fixes height of images for CTA*/
+  
+  #main-content { /*fixes margin on main content on tablet view, so content isn't touching screen edges*/
     padding: 0 .5em;
+    overflow:hidden;
   }
-
-
 }
-
 
 
 /* banner image */
@@ -2658,6 +2660,9 @@ input[type=submit] {
     width: 24%;
     margin-left: -25%;
   }
+  .sidebar-second #main-content {
+    margin-left: 1%;
+  }
 }
 
 /* fixes no margin for the 3rd (green) CTA on homepage main page area on responsive*/
@@ -2706,8 +2711,8 @@ input[type=submit] {
 
   .sidebar-second #main-content {
     margin-right: 2%;
-    margin-left: 1%;
   }
+
   #block-views-news-block,
   #block-views-events-block {
     float: left;
@@ -2949,6 +2954,10 @@ input[type=submit] {
     border-radius: 2px;
     text-shadow: 0 1px 0 #ffffff;
   }
+
+/* min width 768px */
+
+
 }
 @media only screen and (min-width: 800px) and (max-width: 999px) {
   /*--- Slideshow ---*/
@@ -3042,9 +3051,10 @@ input[type=submit] {
   }
 
   #columns .region-sidebar-second {
-    width: 22%;
+    width: 23%;
     margin-left: -23%;
   }
+  .cta-wrap .cta-img {height: 138px} /* fixes height of images for CTA*/
   
 }
 @media only screen and (min-width: 1024px) {
@@ -3058,4 +3068,8 @@ input[type=submit] {
 /*fixes the slideshow banner overlapping with the page text on tablet layout*/
 
 .front .region-highlighted { height: 250px}
-/**/
+/*needs to override the wider range specified for cta margin row-3*/
+@media only screen and (min-width: 756px) and (max-width: 767px) {
+  .front .region-content .view-cta-homepage .views-row-3 { margin-right:0px; margin-top: 0px}
+}/* when 3 CTA are inline on main home page area, the 3rd CTA should be allined*/
+
