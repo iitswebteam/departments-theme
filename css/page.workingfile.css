@@ -1859,7 +1859,8 @@ input[type=submit] {
 #block-views-slideshow-banner-block img { width:100% !important}
 
 }
-@media only screen and (min-width: 320px) and (max-width: 599px) {
+/* range expended from 599 to 800 so we can see menu on tablets */
+@media only screen and (min-width: 320px) and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
@@ -2254,6 +2255,14 @@ input[type=submit] {
   #superfish-1-select {
     display: none;
   }
+}
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+
   /*--- main content area ---*/
   #page-title {
     margin-bottom: 1em;
@@ -2453,6 +2462,7 @@ input[type=submit] {
     padding: 0;
   }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 599px) {
     .views-slideshow-controls-bottom {
     position: absolute;
@@ -2461,9 +2471,7 @@ input[type=submit] {
     padding: 0;
     z-index: 200;
   }
-  #google {
-    width: 70%;
-  }
+  
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 250px;
   }
@@ -2516,11 +2524,7 @@ input[type=submit] {
   .cta-img {
     /*height: 126px;*/
   }
-  #menu-bar ul li {
-    /*width: 25%; we don't need this effect on buttons for tablet*/
-    border-bottom: 1px solid #fff;
-    border-top: none;
-  }
+
       .views-slideshow-controls-bottom {
     position: absolute;
     top: 195px;
@@ -2531,65 +2535,7 @@ input[type=submit] {
 
 }
 @media only screen and (min-width: 600px) {
-  /* TOP MENU */
-  .js .slicknav_menu {
-    display: none;
-  }
-  /*#menu-bar ul.slimmenu li .sub-collapser {display: none;}*/
-  #menu-bar {
-    background: #fff;
-    padding-left: 0;
-  }
-  #menu-bar ul li {
-    float: left;
-  }
-  #menu-bar a {
-    color: #002554;
-    display: block;
-    font-weight: bold;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 20px;
-    padding: 12px 12px 8px 12px;
-  }
-  #menu-bar .sf-item-1 a {
-    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
-    text-indent: -99999px;
-    width: 19px;
-  }
-  #menu-bar .sf-item-1 a:hover {
-    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
-    text-indent: -99999px;
-    width: 19px;
-  }
-  #menu-bar .sf-item-1 a.active {
-    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
-    text-indent: -99999px;
-    width: 19px;
-  }
-  #menu-bar ul li ul li {
-    border-bottom: 1px solid #e6e4e2;
-  }
-  #menu-bar ul li ul li.sf-depth-2 a {
-    background: #ddd8a9;
-    text-indent: 0;
-  }
-  #menu-bar ul li ul li.sf-depth-2 a:hover,
-  #menu-bar ul li ul li.sf-depth-2 a.active {
-    background: #bfb800;
-    text-indent: 0;
-  }
-  /* Arrows for children menu indication*/
-  #menu-bar .sf-depth-2 a.menuparent {
-    background: #ddd8a9 url('images/menu-collapsed.png') right 18px no-repeat;
-  }
-  #menu-bar .sf-depth-2 li a.menuparent {
-    padding-right: 5px;
-  }
-  #menu-bar .sf-depth-2 .menuparent:hover,
-  #menu-bar ul li ul li a.menuparent:active {
-    background: #bfb800 url('images/menu-collapsed.png') right 18px no-repeat;
-  }
+  
   /* ----------------------
   		HOMEPAGE BANNER
   		---------------------- */
@@ -2975,6 +2921,78 @@ input[type=submit] {
   
 }
 
+@media only screen and (min-width: 800px) {
+  .js .slicknav_menu {
+    display: none;
+  }
+    #menu-bar ul li {
+    /*width: 25%; we don't need this effect on buttons for tablet*/
+    /*border-bottom: 1px solid #fff;*/
+    border-top: none;
+  }
+  #menu-bar {
+    border-bottom: 1px solid #002554;
+    height: 40px;
+  }
+  /* TOP MENU */
+
+  /*#menu-bar ul.slimmenu li .sub-collapser {display: none;}*/
+  #menu-bar {
+    background: #fff;
+    padding-left: 0;
+  }
+  #menu-bar ul li {
+    float: left;
+  }
+  #menu-bar a {
+    color: #002554;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding: 12px 12px 8px 12px;
+  }
+  #menu-bar .sf-item-1 a {
+    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
+    text-indent: -99999px;
+    width: 19px;
+  }
+  #menu-bar .sf-item-1 a:hover {
+    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
+    text-indent: -99999px;
+    width: 19px;
+  }
+  #menu-bar .sf-item-1 a.active {
+    background: url(images/home_btn_20x50.png) no-repeat 10px 10px;
+    text-indent: -99999px;
+    width: 19px;
+  }
+  #menu-bar ul li ul li {
+    border-bottom: 1px solid #e6e4e2;
+  }
+  #menu-bar ul li ul li.sf-depth-2 a {
+    background: #ddd8a9;
+    text-indent: 0;
+  }
+  #menu-bar ul li ul li.sf-depth-2 a:hover,
+  #menu-bar ul li ul li.sf-depth-2 a.active {
+    background: #bfb800;
+    text-indent: 0;
+  }
+  /* Arrows for children menu indication*/
+  #menu-bar .sf-depth-2 a.menuparent {
+    background: #ddd8a9 url('images/menu-collapsed.png') right 18px no-repeat;
+  }
+  #menu-bar .sf-depth-2 li a.menuparent {
+    padding-right: 5px;
+  }
+  #menu-bar .sf-depth-2 .menuparent:hover,
+  #menu-bar ul li ul li a.menuparent:active {
+    background: #bfb800 url('images/menu-collapsed.png') right 18px no-repeat;
+  }
+}
+
 /*just for bullets on the slideshow banner*/
 @media only screen and (min-width: 600px) and (max-width: 999px) {
 .views-slideshow-controls-bottom {
@@ -2984,18 +3002,11 @@ input[type=submit] {
     padding: 0;
     z-index: 200;
   }
-  #menu-bar {
-    border-bottom: 1px solid #002554;
-    height: 40px;
-  }
+  
   .view-static-banner img { width: 98%} /* fixes static banner not touching edge of screen on smaller screens*/
   .not-front .sidebar-second #main-content { width:89%} /* fixes static banner touching CTA on tablet*/
 }
 @media only screen and (min-width: 900px) {
-  #menu-bar {
-    border-bottom: 1px solid #002554;
-    height: 40px;
-  }
   
   .view-slideshow-banner {
     height: 240px;
