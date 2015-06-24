@@ -2508,24 +2508,24 @@ input[type=submit] {
     padding: 0 .5em;
     overflow:hidden;
   }
+  .not-front.sidebar-first .region-sidebar-first { width: 96%}
+  .two-sidebars .region-sidebar-second { width: 100%}
 }
 
 
 /* banner image */
 
   #block-views-slideshow-banner-block img { width:100% !important}
-}
+
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   .cta-wrap {
     float: left;
     margin-right: 2%;
     /*width: 210px;*/
   }
-  .cta-img {
-    /*height: 126px;*/
-  }
+ 
 
-      .views-slideshow-controls-bottom {
+  .views-slideshow-controls-bottom {
     position: absolute;
     top: 195px;
     right: 5px;
@@ -2593,7 +2593,10 @@ input[type=submit] {
     width: 92%;
   }
   .sidebar-first #main-content {
-    width: 90%;
+    width: 92%;
+  }
+  .not-front #main-content {
+    width: 75%;
   }
   #columns .region-sidebar-second {
     width: 24%;
@@ -2644,7 +2647,7 @@ input[type=submit] {
   }
   .two-sidebars #main-content {
     margin: 20px 2% 0 2%;
-    width: 500px;
+    width: 50%;
     float: left;
   }
 
@@ -2902,6 +2905,7 @@ input[type=submit] {
 /*adds margin for breadcrumb and navigation for all layouts below desktop size*/
   #breadcrumb, .not-front .region-sidebar-first 
   { margin-left: 2%; }
+
   .view-static-banner img { width: 99%} /* fixes static banner not touching edge of screen on smaller screens*/
 }
 
