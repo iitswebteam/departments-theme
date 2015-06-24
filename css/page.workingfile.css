@@ -2925,25 +2925,25 @@ input[type=submit] {
   .js .slicknav_menu {
     display: none;
   }
+    
+  #menu-bar {
+    border-bottom: 1px solid #002554;
+    height: 40px;
+    background: #fff;
+    padding-left: 0;
+  }
+  
     #menu-bar ul li {
     /*width: 25%; we don't need this effect on buttons for tablet*/
     /*border-bottom: 1px solid #fff;*/
     border-top: none;
+    float: left;
   }
-  #menu-bar {
-    border-bottom: 1px solid #002554;
-    height: 40px;
-  }
+  
   /* TOP MENU */
 
   /*#menu-bar ul.slimmenu li .sub-collapser {display: none;}*/
-  #menu-bar {
-    background: #fff;
-    padding-left: 0;
-  }
-  #menu-bar ul li {
-    float: left;
-  }
+ 
   #menu-bar a {
     color: #002554;
     display: block;
