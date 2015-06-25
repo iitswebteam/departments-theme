@@ -837,7 +837,7 @@ ul.quicktabs-tabs li {
   margin: 10px 0;
 }
 .two-sidebars #block-views-static-banner-block .field-type-image {
-  max-width: 490px;
+  max-width: 98%;
 }
 .www {
   background: url('images/www.png') no-repeat;
@@ -2508,7 +2508,12 @@ input[type=submit] {
     padding: 0 .5em;
     overflow:hidden;
   }
-  .not-front.sidebar-first .region-sidebar-first { width: 96%}
+  .not-front.sidebar-first .region-sidebar-first, 
+  .not-front.two-sidebars .region-sidebar-first
+  { 
+    display: none;
+    visibility: hidden;
+  }
   .two-sidebars .region-sidebar-second { width: 100%}
   .two-sidebars #main-content {float:left}
 }
@@ -2581,7 +2586,7 @@ input[type=submit] {
   }
   .two-sidebars #main-content {
     margin: 20px 2% 0 2%;
-    width: 500px;
+    width: 96%;
     float: left;
   }
 }
