@@ -2217,8 +2217,10 @@ input[type=submit] {
   #menu-bar ul li ul li.sf-no-children a {
     padding: .6em;
   }
-  #menu-bar ul li ul li.sf-depth-3 a {
-    padding: .5em .8em 1.2em 1.1em;
+  #menu-bar ul li ul li.sf-depth-3 {
+    padding: .3em .8em .3em 2em;
+    border-bottom: 1px solid #d9dce1;
+    width:95% !important;
   }
   #menu-bar ul li:hover {
     background: #bfb800;
@@ -2274,6 +2276,7 @@ input[type=submit] {
   #main-content .block-inner {
     margin-top: -1em;
   }
+  .region-sidebar-first { display:none;}
   /*
 
   teaser view was too spread out - style was inconsistent with the CTA teaser view on mobile
@@ -2980,6 +2983,7 @@ input[type=submit] {
   }
   #menu-bar ul li ul li {
     border-bottom: 1px solid #e6e4e2;
+
   }
   #menu-bar ul li ul li.sf-depth-2 a {
     background: #ddd8a9;
