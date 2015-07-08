@@ -5,13 +5,15 @@
 
   <?php
     // Display an image teaser (either the landscape one or the portrait if available)
-    if( array_key_exists( 'field_list_page_image', $content ) ) {
+    if( array_key_exists( 'field_summary_image', $content ) ) {
+      print render( $content[ 'field_summary_image' ] );
+    } else if ( array_key_exists( 'field_list_page_image', $content ) ) {
       print render( $content[ 'field_list_page_image' ] );
+    } else if ( array_key_exists( 'field_image', $content ) ) {
+      print render( $content[ 'field_image' ] );
     } else if ( array_key_exists( 'field_portrait_image', $content ) ) {
       print render( $content[ 'field_portrait_image' ] );
-    } else if ( array_key_exists( 'field_page_image', $content ) ) {
-      print render( $content[ 'field_page_image' ] );
-    }
+    } 
   ?>
 
   <div<?php print $content_attributes; ?>>
@@ -28,14 +30,17 @@
     hide( $content[ 'comments' ] );
     hide( $content[ 'links' ] );
     hide ($content['node-readmore']);
-  if( array_key_exists( 'field_list_page_image', $content ) ) {
+  if( array_key_exists( 'field_summary_image', $content ) ) {
+      hide( $content[ 'field_portrait_image' ] );
       hide( $content[ 'field_list_page_image' ] );
+      hide( $content[ 'field_image' ] );
     } else if ( array_key_exists( 'field_portrait_image', $content ) ) {
       hide( $content[ 'field_portrait_image' ] );
-    } else if ( array_key_exists( 'field_page_image', $content ) ) {
-      hide( $content[ 'field_page_image' ] );
+    } else if ( array_key_exists( 'field_list_page_image', $content ) ) {
+      hide( $content[ 'field_list_page_image' ] );
+    } else if ( array_key_exists( 'field_image', $content ) ) {
+      hide( $content[ 'field_image' ] );
     }
-
     print render( $content );
   ?>
   </div>
