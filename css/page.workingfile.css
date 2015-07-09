@@ -1859,6 +1859,8 @@ input[type=submit] {
 /* banner image */
 #block-views-slideshow-banner-block img { width:100% !important}
 
+.not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
+
 }
 /* range expended from 599 to 800 so we can see menu on tablets */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
@@ -2277,6 +2279,7 @@ input[type=submit] {
   #main-content .block-inner {
     margin-top: -1em;
   }
+
   .region-sidebar-first { display:none;}
   /*
 
@@ -2511,7 +2514,10 @@ input[type=submit] {
   #main-content { /*fixes margin on main content on tablet view, so content isn't touching screen edges*/
     padding: 0 .5em;
     overflow:hidden;
+    margin-right:2%;
   }
+
+  .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
   .not-front.sidebar-first .region-sidebar-first, 
   .not-front.two-sidebars .region-sidebar-first
   { 
@@ -2599,16 +2605,16 @@ input[type=submit] {
     font-size: 12px;
     font-size: 1.2rem;
   }
-  .sidebar-second #main-content {
-    width: 92%;
+.sidebar-second #main-content, .not-front.sidebar-second #main-content {
+    width: 91%;
   }
-  .sidebar-first #main-content {
-    width: 92%;
-  }
-  .not-front #main-content {
+  
+  .not-front #main-content, .not-front.sidebar-first #main-content {
     width: 75%;
   }
-  .not-front.one-sidebar.sidebar-second { width:90%}
+
+  .not-front.no-sidebars #main-content { width:98%; margin-left:1%;}
+
   #columns .region-sidebar-second {
     width: 24%;
     margin-left: -25%;
