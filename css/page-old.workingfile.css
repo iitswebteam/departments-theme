@@ -138,6 +138,7 @@ ul li ul li {
 .sidebar-first #main-content {
   margin-right: 0;
   margin-left: 2%;
+  margin-right: 2%;
 }
 #page-title {
   font-size: 21px;
