@@ -1883,6 +1883,9 @@ input[type=submit] {
 
 .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
 
+.sidebar.region-sidebar-second {width: 100%;} /* fixes CTA not becoming 100% in width on cellphone */
+
+
 }
 /* range expended from 599 to 800 so we can see menu on tablets */
 @media only screen and (min-width: 320px) and (max-width: 800px) {
