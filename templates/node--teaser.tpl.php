@@ -11,6 +11,8 @@
       print render( $content[ 'field_list_page_image' ] );
     } else if ( array_key_exists( 'field_image', $content ) ) {
       print render( $content[ 'field_image' ] );
+    } else if ( array_key_exists( 'field_article_image', $content ) ) {
+      print render( $content[ 'field_article_image' ] );
     } else if ( array_key_exists( 'field_portrait_image', $content ) ) {
       print render( $content[ 'field_portrait_image' ] );
     } 
@@ -34,12 +36,15 @@
       hide( $content[ 'field_portrait_image' ] );
       hide( $content[ 'field_list_page_image' ] );
       hide( $content[ 'field_image' ] );
+      hide( $content[ 'field_article_image' ] );
     } else if ( array_key_exists( 'field_portrait_image', $content ) ) {
       hide( $content[ 'field_portrait_image' ] );
     } else if ( array_key_exists( 'field_list_page_image', $content ) ) {
       hide( $content[ 'field_list_page_image' ] );
     } else if ( array_key_exists( 'field_image', $content ) ) {
       hide( $content[ 'field_image' ] );
+    } else if ( array_key_exists( 'field_article_image', $content ) ) {
+      hide( $content[ 'field_article_image' ] );
     }
     print render( $content );
   ?>

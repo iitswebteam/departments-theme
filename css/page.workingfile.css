@@ -1843,7 +1843,7 @@ input[type=submit] {
   .cta-img {
     height: auto;
   }
-  .region-sidebar-second .view-cta-sidebar {
+  .region-sidebar-second {
     margin: 0 .5em 0 .5em;
   }
   .description {
