@@ -1830,7 +1830,7 @@ input[type=submit] {
   #google {
     width: 60%;
   }
-  /*--- CTA's ---*/
+  /*--- CTA's 
   .view-cta-homepage .views-row {
     float: none;
     margin: 0 0 20px 0;
@@ -1853,7 +1853,7 @@ input[type=submit] {
   }
   .description img {
     width: 100%;
-  }
+  }---*/
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 170px;
   }
@@ -1886,7 +1886,7 @@ input[type=submit] {
 .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
 
 /* .sidebar.region-sidebar-second {width: 100%;} fixes CTA not becoming 100% in width on cellphone */
-.html.one-sidebar .sidebar { width:96%;}
+.html.one-sidebar .sidebar, .not-front .region-sidebar-second { width:96%;}
 
 }
 /* range expended from 599 to 800 so we can see menu on tablets */
@@ -2287,24 +2287,45 @@ input[type=submit] {
   #superfish-1-select {
     display: none;
   }
+    /*--- main content area ---*/
+  #page-title {
+    margin-bottom: 1em;
+    margin-top: 1.5em ;
+  }
+
+  .cta-wrap, .view-cta-homepage .views-row { 
+    width: 230px;
+    float: left;
+    margin-right: 20px
+    }
+
+  .front .view-cta-homepage .views-row-3 { margin-right:20px; margin-top: 20px}
+  
+  .region-sidebar-second .view-cta-sidebar {
+    margin:0 .5em;
+  }
+  .cta-wrap .cta-img {height: 138px} /* fixes height of images for CTA*/
+
 }
 
+/* 
+--------------------------------
 
+          @media only screen and (min-width: 320px) and (max-width: 800px) ends 
+
+--------------------------------
+*/
 
 
 
 @media only screen and (min-width: 320px) and (max-width: 599px) {
 
-  /*--- main content area ---*/
-  #page-title {
-    margin-bottom: 1em;
-    margin-top: 3em ;
-  }
-  #main-content,
+
+  /*#main-content,
   .one-sidebar #main-content,
-  #block-views-slideshow-banner-block .block-inner,
+  #block-views-slideshow-banner-block .block-inner,*/
   #main-content .block-inner {
-    margin-top: -1em;
+    margin-top: 0;
   }
 
   .region-sidebar-first { display:none;}
@@ -2575,6 +2596,7 @@ input[type=submit] {
     padding: 0;
     z-index: 200;
   }
+
 
 }
 @media only screen and (min-width: 600px) {
@@ -3130,14 +3152,15 @@ input[type=submit] {
 }
 /*fixes the slideshow banner overlapping with the page text on tablet layout*/
 
-.front .region-highlighted { height: 250px}
+.front .region-highlighted .view { height: 250px}
+
 /*needs to override the wider range specified for cta margin row-3*/
 @media only screen and (min-width: 756px) and (max-width: 767px) {
   .front .region-content .view-cta-homepage .views-row-3 { margin-right:0px; margin-top: 0px}
   .views-row-3 .cta-wrap { margin-right:0} /*3rd CTA doesn not need a margin, so it has space to line up in 1 row on tablet. A margin would make it jump underneath*/
 }/* when 3 CTA are inline on main home page area, the 3rd CTA should be allined*/
 /* fixes margin top for 2nd and 4th homepage CTA */
-@media only screen and (min-width: 479px) and (max-width: 514px) {
+@media only screen and (max-width: 514px) {
   .front .view-cta-homepage .views-row-2, 
   .front .view-cta-homepage .views-row-4 { margin-top: 20px}
 }
