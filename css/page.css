@@ -134,7 +134,7 @@ ul li ul li {
 }
 #main-content,
 .one-sidebar #main-content {
-  /*margin-top: 2%;*/
+  margin-top: 2%;
 }
 .sidebar-first #main-content {
   margin-right: 0;
@@ -1093,6 +1093,7 @@ tr td:not(:empty) ~ td:empty {
 }
 #menu-bar a.active,
 #menu-bar .active-trail,
+.gallery .gallery_active,
 .person .people-active/* solves the bug of not having the link active while displaying people profile pages */ {
   background: #bfb800;
 }
@@ -1830,6 +1831,10 @@ input[type=submit] {
   #google {
     width: 60%;
   }
+  .region .cta-wrap, 
+  .region .view-cta-homepage .views-row 
+  { float:none; margin:0 auto; margin-bottom: 20px;}
+  .region .sidebar { margin:0 auto}
   /*--- CTA's 
   .view-cta-homepage .views-row {
     float: none;
@@ -1885,8 +1890,7 @@ input[type=submit] {
 
 .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
 
-/* .sidebar.region-sidebar-second {width: 100%;} fixes CTA not becoming 100% in width on cellphone */
-.html.one-sidebar .sidebar, .not-front .region-sidebar-second { width:96%;}
+.html.one-sidebar .sidebar, .not-front .region-sidebar-second { width:100%;}
 
 }
 /* range expended from 599 to 800 so we can see menu on tablets */
@@ -2299,7 +2303,7 @@ input[type=submit] {
     margin-right: 20px
     }
 
-  .front .view-cta-homepage .views-row-3 { margin-right:20px; margin-top: 20px}
+  /*.front .view-cta-homepage .views-row-3 { margin-right:20px; margin-top: 20px}*/
   
   .region-sidebar-second .view-cta-sidebar {
     margin:0 .5em;
