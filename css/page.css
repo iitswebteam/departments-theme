@@ -3193,9 +3193,9 @@ input[type=submit] {
 
 
 /*banner overlap with title fix*/
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 600px) and (max-width: 999px) {
   .front .region-highlighted .view { height: 210px}
-  .view-slideshow-banner img { max-width: 755px}
+  .view-slideshow-banner img { max-width: 755px; width: 100%}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 599px) {
