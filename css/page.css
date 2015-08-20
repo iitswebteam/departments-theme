@@ -1862,12 +1862,7 @@ input[type=submit] {
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 170px;
   }
-  .views-slideshow-controls-bottom {
-    position: absolute;
-    z-index: 200;
-    top: 100px;
-    left: 25px;
-  }
+  
   /* this makes the picture touch the text on teaser page view on mobile
   
   .teaser .field-type-image {
@@ -1886,7 +1881,7 @@ input[type=submit] {
   }
 
 /* banner image */
-#block-views-slideshow-banner-block img { width:100% !important}
+/*#block-views-slideshow-banner-block img { width:100% !important}*/
 
 .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
 
@@ -2324,6 +2319,53 @@ input[type=submit] {
 
 @media only screen and (min-width: 320px) and (max-width: 599px) {
 
+/* slideshow banner centering bullets on mobile */
+  .views-slideshow-controls-bottom {
+    position: absolute;
+    z-index: 200;
+    bottom: 70px;
+    left: 50%;
+  }
+
+/* make bullets larger for touchability */
+
+.views-content-counter {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+
+.views-slideshow-pager-field-item { width: 40px;}
+
+ #widget_pager_bottom_slideshow_banner-block {
+    float: none;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: -50%;
+  }
+
+.banner-description {
+    background: #4c6687;
+    color: #fff;
+    padding: .4em;
+    margin-top: -0.2em;
+    font-family: sans-serif;
+    padding-top: 50px;
+  }
+  .banner-description p {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .banner-description h2 a {
+    color: #fff;
+    font-size: 16px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
 
   /*#main-content,
   .one-sidebar #main-content,
@@ -2350,30 +2392,9 @@ input[type=submit] {
   .field-name-body img {
     display: none;
   }
-  .banner-description {
-    background: #4c6687;
-    color: #fff;
-    padding: .4em;
-    margin-top: -0.2em;
-    font-family: sans-serif;
-  }
-  .banner-description p {
-    font-size: 14px;
-    font-size: 1.4rem;
-  }
-  .banner-description h2 a {
-    color: #fff;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    font-family: sans-serif;
-  }
+  
 
-  #widget_pager_bottom_slideshow_banner-block {
-    float: none;
-    margin-top: 10px;
-    display: inline-block;
-  }
+ 
   .sidebar-first .view-static-banner img {
     width: auto !important;
   }
@@ -2523,13 +2544,13 @@ input[type=submit] {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 599px) {
-    .views-slideshow-controls-bottom {
+  /*  .views-slideshow-controls-bottom {
     position: absolute;
     top: 195px;
     right: 5px;
     padding: 0;
     z-index: 200;
-  }
+  }*/
   
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 250px;
@@ -2583,7 +2604,7 @@ input[type=submit] {
 
 /* banner image */
 
-  #block-views-slideshow-banner-block img { width:100% !important}
+/*  #block-views-slideshow-banner-block img { width:100% !important}*/
 
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   .cta-wrap {
@@ -3156,7 +3177,8 @@ input[type=submit] {
 }
 /*fixes the slideshow banner overlapping with the page text on tablet layout*/
 
-.front .region-highlighted .view { height: 250px}
+/*
+.front .region-highlighted .view { height: 250px}*/
 
 /*needs to override the wider range specified for cta margin row-3*/
 @media only screen and (min-width: 756px) and (max-width: 767px) {
@@ -3167,4 +3189,18 @@ input[type=submit] {
 @media only screen and (max-width: 514px) {
   .front .view-cta-homepage .views-row-2, 
   .front .view-cta-homepage .views-row-4 { margin-top: 20px}
+}
+
+
+/*banner overlap with title fix*/
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .front .region-highlighted .view { height: 210px}
+  .view-slideshow-banner img { max-width: 755px}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  /*fixes the slideshow banner description box overlapping page title */
+  .front .region-highlighted .view { height: 360px}
+  /*fixes chrome scaling problem inherited from at img rule */
+  .view-slideshow-banner img { max-width: 640px}
 }
