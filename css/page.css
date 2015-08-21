@@ -491,6 +491,8 @@ ul.info {
   float: left;
   width: 205px;
 }
+
+ul.info h2 { margin-bottom:.5em; }
 ul.info li {
   line-height: 20px;
 }
@@ -810,13 +812,13 @@ ul.quicktabs-tabs li {
   height: 37px;
 }
 .mgmt-social-media-link-txt {
-  float: left;
+  /*float: left;*/
   height: 37px;
-  width: 165px;
-  padding: 10px 5px;
+  /*width: 165px;*/
+  padding: 17px 19px;
 }
 .mgmt-social-media-link-txt a {
-  line-height: 37px;
+  line-height: 20px; /*changed from 37px*/
 }
 .media-youtube-video {
   position: relative;
@@ -1885,7 +1887,7 @@ input[type=submit] {
 
 .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
 
-.html.one-sidebar .sidebar, .not-front .region-sidebar-second { width:100%;}
+.html.one-sidebar .sidebar, .not-front .region-sidebar-second { width:98%; margin-left:1%;}
 
 }
 /* range expended from 599 to 800 so we can see menu on tablets */
@@ -2587,7 +2589,7 @@ input[type=submit] {
   #main-content { /*fixes margin on main content on tablet view, so content isn't touching screen edges*/
     padding: 0 .5em;
     overflow:hidden;
-    margin-right:2%;
+    /*margin-right:2%;*/
   }
 
   .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
@@ -2597,7 +2599,7 @@ input[type=submit] {
     display: none;
     visibility: hidden;
   }
-  .two-sidebars .region-sidebar-second { width: 100%}
+  .two-sidebars .region-sidebar-second, .region-sidebar-second, .html.one-sidebar .sidebar { width: 98%; margin-left:1%}
   .two-sidebars #main-content {float:left}
 }
 
@@ -2669,8 +2671,8 @@ input[type=submit] {
     max-width: none;
   }
   .two-sidebars #main-content {
-    margin: 20px 2% 0 2%;
-    width: 96%;
+    margin: 20px 1% 0 1%;
+    width: 98%;
     float: left;
   }
 }
@@ -3202,5 +3204,8 @@ input[type=submit] {
   /*fixes the slideshow banner description box overlapping page title */
   .front .region-highlighted .view { height: 360px}
   /*fixes chrome scaling problem inherited from at img rule */
-  .view-slideshow-banner img { max-width: 640px}
+  .view-slideshow-banner img { max-width: 599px}
+  .banner-description p {max-width:375px} /* fixes text cutoff */
+  #main-content {margin-right: 2%; overflow:hidden} /*shows the white margin to the right, even though the image is larger*/
+
 }
