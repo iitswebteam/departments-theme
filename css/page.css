@@ -235,6 +235,7 @@ ul li ul li {
 }
 .article-type-person .group-left {
   margin-right: 20px;
+  margin-bottom: 20px;
   width: auto;
 }
 .article-type-person .group-right {
@@ -802,9 +803,10 @@ ul.quicktabs-tabs li {
   margin-left: 0.75em;
   padding: 0;
 }
-#block-block-3 {
+#block-block-3, /*social media block for mgmt*/ .social-networking {
   background-color: #ebebeb;
 }
+.social-networking { margin-bottom: 20px;}
 .mgmt-social-media-icon {
   float: left;
   padding: 10px 5px 10px 10px;
@@ -2355,7 +2357,7 @@ input[type=submit] {
     padding: .4em;
     margin-top: -0.2em;
     font-family: sans-serif;
-    padding-top: 50px;
+    padding-top: 15px;
   }
   .banner-description p {
     font-size: 14px;
@@ -2589,7 +2591,7 @@ input[type=submit] {
   #main-content { /*fixes margin on main content on tablet view, so content isn't touching screen edges*/
     padding: 0 .5em;
     overflow:hidden;
-    /*margin-right:2%;*/
+    margin-right:2%;
   }
 
   .not-front.sidebar-first #main-content {margin-right:2%;} /*override*/
@@ -3206,6 +3208,9 @@ input[type=submit] {
   /*fixes chrome scaling problem inherited from at img rule */
   .view-slideshow-banner img { max-width: 599px}
   .banner-description p {max-width:375px} /* fixes text cutoff */
-  #main-content {margin-right: 2%; overflow:hidden} /*shows the white margin to the right, even though the image is larger*/
-
+  #main-content {overflow:hidden; margin-right:2%;} /*shows the white margin to the right, even though the image is larger*/
+  .bullet-bg { 
+    height: 63px;
+    background: #4c6687;
+    margin-top: -3px;}
 }
