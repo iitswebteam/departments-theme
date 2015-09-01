@@ -1565,11 +1565,25 @@ h2.block-title {
   font-size: 13px;
   font-size: 1.3rem;
 }
-.article-content .news-list-page .feed-date,
-.not-front .view-news-block .news-list-page .feed-date {
+.article-content .news-list-page .feed-date
+{
   float: left;
   width: 100px;
 }
+
+.not-front .view-news-block .news-list-page .feed-date {
+  float: left;
+}
+
+/* new because of dispaly conflict with management */
+#main-content .departmental-events ul li
+{
+  min-height:50px;
+  }
+#main-content .departmental-events ul li .feed-date
+{    width: 40px;
+}
+
 .article-content .news-list-page .feed-time,
 .not-front .view-news-block .news-list-page .feed-time {
   display: none;
