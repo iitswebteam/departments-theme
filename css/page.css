@@ -198,7 +198,8 @@ ul li ul li {
 .field-name-body .no_border { border: none}
 .field-name-body .img_left_free,
 .field-name-body .img_right_free,
-.field-name-body .img_normal {
+.field-name-body .img_normal,
+.field-name-body .img_center {
   max-width: 100%;
 }
 .field-name-field-portrait-image,
@@ -227,6 +228,7 @@ ul li ul li {
   margin-left: auto;
   margin-right: auto;
 }
+
 .teaser .field-name-field-portrait-image {
   margin: 0;
 }
@@ -819,6 +821,8 @@ ul.quicktabs-tabs li {
   /*width: 165px;*/
   padding: 17px 19px;
 }
+
+
 .mgmt-social-media-link-txt a {
   line-height: 20px; /*changed from 37px*/
 }
@@ -1098,7 +1102,9 @@ tr td:not(:empty) ~ td:empty {
 #menu-bar a.active,
 #menu-bar .active-trail,
 .gallery .gallery_active,
-.person .people-active/* solves the bug of not having the link active while displaying people profile pages */ {
+.employment .employment-active,
+.person .people-active/* solves the bug of not having the link active while displaying people profile pages */,
+.eventpage .events-active {
   background: #bfb800;
 }
 #block-menu-block-1 {
@@ -1838,6 +1844,66 @@ input[type=submit] {
 #webform-client-form-205 input[type=submit]:hover {
   background: #efefef;
 }
+
+/*blue button style*/
+
+a.btn {
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 600;
+  background: #002554;
+  border: 1px solid #cccccc;
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+a.btn:hover {
+  color: #f4f4f4;
+  background: #6cace4;
+}
+
+
+/* Event Content Type */
+
+.event .views-row-odd {background:#E6E4E2}
+.event .views-row {margin-bottom:20px; padding:10px; padding-bottom:0;}
+.event a.btn { width:150px; display:inline-block;}
+.event img { float:left; margin-right:20px; padding-bottom:10px;}
+.event h2
+  {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    color: #111;
+    }
+
+.event .date {margin-bottom:0}
+.event .location {margin-top:.5em}
+.event p {line-height:2.2rem}
+/*
+
+
+
+
+
+Responsive below 
+
+
+
+
+
+
+
+*/ 
+
 /**
  * Use this file to conditionally override styles for devices.
  * If you adjust the media queries in the theme settings you should
@@ -2411,7 +2477,10 @@ input[type=submit] {
     display: none;
   }
   
-
+  .field-name-body table img {
+    display: block;
+    width: 90%;
+  }
  
   .sidebar-first .view-static-banner img {
     width: auto !important;
@@ -2725,6 +2794,8 @@ input[type=submit] {
   /* Changes for askcoop alumni page */
   .askcoop .field-name-body ul {margin-left: 240px;}
   
+
+.mgmt-social-media-link-txt-2l {padding-top:10px;} /*accomodate 2 lines for social media text*/
 
   #menu-bar ul li ul {
     margin: 0;
@@ -3183,6 +3254,8 @@ input[type=submit] {
     margin-left: -23%;
   }
   .cta-wrap .cta-img {height: 138px} /* fixes height of images for CTA*/
+  
+  .event .event_brief {margin-left:270px;}
   
 }
 @media only screen and (min-width: 1024px) {

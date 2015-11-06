@@ -8,8 +8,6 @@
 <?php
   //<meta charset="utf-8" > will be inserted by Drupal
   print $head;
-  
-
 ?>
 <title>
 	<?php if (drupal_is_front_page()) : ?>
@@ -29,7 +27,6 @@
 <link href="//www.utsc.utoronto.ca/_includes/styles/hf.css" rel="stylesheet" media="screen" type="text/css" />
 <!--[if gte IE 7]><link href="//www.utsc.utoronto.ca/_includes/styles/ie.css" rel="stylesheet" media="screen" /><![endif]-->
 <?php print $styles; ?>
-
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -45,8 +42,10 @@
   print $page_bottom;
   print $scripts;
 ?>
-</div>
 
+</div>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="//www.utsc.utoronto.ca/_includes/scripts/top-nav-accordion.js"></script>-->
 <script src="//www.utsc.utoronto.ca/_includes/scripts/tabs.js"></script>
 <script src="//www.utsc.utoronto.ca/_includes/scripts/slide-menu-test.js"></script>
 
