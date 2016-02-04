@@ -527,9 +527,13 @@ li.full-bio a {
 }
 .view-contact-info .no-photo,
 .view-teaching-technichians .no-photo,
-.view-administration .no-photo {
+.view-administration .no-photo
+ {
   height: 120px;
+  width:345px;
 }
+.view-contact-info .no-photo ul.info {width:345px;}
+
 #block-views-contact-info-block .block-inner {
   margin-top: -10px;
 }
@@ -1868,6 +1872,22 @@ a.btn:hover {
   background: #6cace4;
 }
 
+a.greybtn {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #e1dfdd;
+    color: #666666; 
+    display:inline; 
+    padding: 6px;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    }
+
+a.greybtn:hover {
+  background: #4d6d92;
+  color: #fff;
+}
 
 /* Event Content Type */
 
@@ -1877,8 +1897,8 @@ a.btn:hover {
 .event img { float:left; margin-right:20px; padding-bottom:10px;}
 .event h2
   {
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    /*line-height: 2.5rem;*/
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccc;
     padding-bottom: 1rem;
@@ -1887,7 +1907,7 @@ a.btn:hover {
 
 .event .date {margin-bottom:0}
 .event .location {margin-top:.5em}
-.event p {line-height:2.2rem}
+.event p {line-height:2.2rem; margin-bottom: 0;}
 /*
 
 
