@@ -3321,3 +3321,17 @@ Responsive below
     background: #4c6687;
     margin-top: -3px;}
 }
+
+/* CLN Calendar Events Detail Page - Joseph Stewart */
+
+h2.cln-event-details-title{
+  font-size: 1.8rem; 
+  font-weight: bold;
+  color:#002554;
+
+}
+
+p.cln-event-details-info{
+  color:#002554;
+  font-size: 1.6rem;
+}
