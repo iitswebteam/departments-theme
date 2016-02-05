@@ -3360,3 +3360,6 @@ p.cln-event-details-info{
     line-height: 1.5em;
 }
 
+/* FAQ line height fix */
+.view-faq p {line-height: 1.5em;}
+
