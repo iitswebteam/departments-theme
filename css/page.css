@@ -3335,3 +3335,28 @@ p.cln-event-details-info{
   color:#002554;
   font-size: 1.6rem;
 }
+
+
+/* Article Content Type - Joseph Stewart --- to be tested */
+.views-field-field-list-page-image{
+  float:left;
+}
+.views-field-field-list-page-image img {
+  margin: 10px 20px 10px 10px;
+}
+.article-type-article.teaser {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+.article-teaser .views-field-field-portrait-image{
+  float:left;
+}
+
+.article-teaser .views-field-field-portrait-image img {
+    margin: 10px 20px 10px 10px;
+}
+
+.teaser .article-content{
+    line-height: 1.5em;
+}
+
