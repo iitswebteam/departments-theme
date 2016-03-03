@@ -27,7 +27,7 @@
  * @ingroup views_templates
  */
 ?>
-<div  id ="accordion" class="<?php print $classes; ?>">
+<div class="my_accordion <?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>

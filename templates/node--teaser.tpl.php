@@ -1,6 +1,8 @@
 <article id="article-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix teaser"<?php print $attributes; ?>>
   <?php
     print $unpublished;
+    //var_dump($form);
+    //die();
   ?>
 
   <?php
@@ -46,6 +48,10 @@
     } else if ( array_key_exists( 'field_article_image', $content ) ) {
       hide( $content[ 'field_article_image' ] );
     }
+
+//new code
+
+//new code
     print render( $content );
   ?>
   </div>

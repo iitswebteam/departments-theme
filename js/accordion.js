@@ -3,7 +3,7 @@
 
 $(function() {
     
-    $( "#accordion" ).accordion ({
+    $( ".my_accordion" ).accordion ({
     		heightStyle: "content",
 	        header: ">div > div > h3",
 	        collapsible: true,
