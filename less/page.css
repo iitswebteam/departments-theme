@@ -901,6 +901,14 @@ a.reg_btn {
   background-position: -140px 9px;
   left: 10px;
 }
+.reg_ln {
+  background-color: #007bb6;
+}
+.reg_ln span {
+  background: url('images/social-combo_0.png') no-repeat;
+  background-position: -170px 9px;
+  left: 10px;
+}
 /* social media ends */
 .mgmt-social-media-link-txt a {
   line-height: 20px;
