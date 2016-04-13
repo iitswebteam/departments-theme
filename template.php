@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Preprocess and Process Functions SEE: http://drupal.org/node/254940#variables-processor
  * 1. Rename each function and instance of "utsc_department_adaptivetheme_subtheme" to match
@@ -21,18 +20,18 @@ function departments_date_all_day_label() {
   return '';
 }
 
-
 function departments_preprocess_html(&$vars) {
   global $theme_key;
   
   // Load the media queries styles
   // Remember to rename these files to match the names used here - they are
   // in the CSS directory of your subtheme.
-  $media_queries_css = array(
-    'departments.responsive.style.css',
+  /* $media_queries_css = array(
+   'departments.responsive.style.css',
     'departments.responsive.gpanels.css'
   );
-  load_subtheme_media_queries($media_queries_css, $theme_key);
+  load_subtheme_media_queries($media_queries_css, $theme_key);*/
+
 
 /**
  * Your form builder.
@@ -80,12 +79,11 @@ function departments_form($form_state) {
   *
   * Your IE CSS file must be in the /css/ directory in your subtheme.
   */
-  
+  /* -- Delete this line to add a conditional stylesheet for IE 7 or less.
   $ie_files = array(
-    'IE 8' => 'ie-8.css',
+    'lte IE 7' => 'ie-lte-7.css',
   );
   load_subtheme_ie_styles($ie_files, $theme_key);
-  
   // */
   
   // Add class for the active theme name
@@ -128,7 +126,34 @@ function departments_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__teaser';
   }
+
+
+
 }
+// WP BLOG COMMENTS - Joseph Stewart March 18th 2016 //
+function departments_preprocess_comment(&$vars) {
+  if ($vars['submitted']) {
+    //Customize "Submitted By: " text
+    $vars['submitted'] = t('<strong>'.$vars['author'].'</strong> <br />!datetime', array( '!datetime' => format_date($vars['node']->created, 'custom', 'F j, Y')));
+  }
+
+
+}
+
+function departments_form_comment_node_wp_blog_form_alter(&$form, &$form_state){
+  //dpm($form);
+  //Change Submit button name
+  $form['actions']['submit']['#value'] = 'Submit Comment';
+  //Remove Preview Button
+  $form['actions']['preview']= NULL;
+}
+// WP BLOG COMMENTS - END //
+
+
+
+
+
+
 // */
 
 /**
@@ -276,3 +301,7 @@ function departments_html_head_alter( &$head_elements ) {
     unset( $head_elements[ $key ] );
   }
 }
+
+
+
+
