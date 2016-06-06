@@ -1,4 +1,4 @@
-All features implemented on dev/CMS.
+All features implemented on dev/sociology and dev/athleticsalumni.
 
 1. image crop: most sites already have this
 
