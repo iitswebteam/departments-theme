@@ -131,16 +131,18 @@ function departments_preprocess_node(&$vars) {
 
 }
 // WP BLOG COMMENTS - Joseph Stewart March 18th 2016 //
-function departments_preprocess_comment(&$vars) {
+function departments_facts_preprocess_comment(&$vars) {
+  
   if ($vars['submitted']) {
     //Customize "Submitted By: " text
-    $vars['submitted'] = t('<strong>'.$vars['author'].'</strong> <br />!datetime', array( '!datetime' => format_date($vars['node']->created, 'custom', 'F j, Y')));
+    $vars['submitted'] = t('<strong>'.$vars['author'].'</strong> <br />!datetime', array( '!datetime' => format_date($vars['comment']->created, 'custom', 'F j, Y')));
+
   }
 
 
 }
 
-function departments_form_comment_node_wp_blog_form_alter(&$form, &$form_state){
+function departments_facts_form_comment_node_wp_blog_form_alter(&$form, &$form_state){
   //dpm($form);
   //Change Submit button name
   $form['actions']['submit']['#value'] = 'Submit Comment';
@@ -303,5 +305,43 @@ function departments_html_head_alter( &$head_elements ) {
 }
 
 
+//injects alt tags for image fields
+function departments_preprocess_field(&$variables, $hook) {
+  //dpm($variables);
+  /*
+  sets up alt tags for all images on 'person' content type with the name of person or 'image placeholder'
+  if the image is generic
+  **/
+  if ($variables['element']['#bundle'] == 'person') {
+    if (($variables['items'][0]['#item']['alt']) == '') {
+      if (($variables['items'][0]['#item']['filename']) == 'person-placeholder.png') {
+        $variables['items'][0]['#item']['alt'] = 'Image placeholder for '.$variables['element']['#object']->title;
+      } else {
+      $variables['items'][0]['#item']['alt'] = $variables['element']['#object']->title;
+      }
+    }
+  }
+  /*
+  sets up alt tags for all images on 'page' content type 
+  
+  if ($variables['element']['#bundle'] == 'page') {
+    if (($variables['items'][0]['#item']['alt']) == '') {
+      if (($variables['element']['#field_name']) == 'field_portrait_image') {
+        $variables['items'][0]['#item']['alt'] = 'Portrait image for '.$variables['element']['#object']->title.' page';
+      } else
+      if (($variables['element']['#field_name']) == 'field_summary_image') {
+        $variables['items'][0]['#item']['alt'] = 'Summary image for '.$variables['element']['#object']->title.' page';
+      }
+    }
+  }
 
-
+  if ($variables['element']['#bundle'] == 'photo_gallery') {
+    $howmany = count($variables['items']);
+    for ($i = 0; $i < $howmany; $i++ ) {
+    if (($variables['items'][0]['#items'][i]['alt']) == '') {
+      $k = $variables['items'][0]['#items'][i]['alt'] = 'photo-'.($i+1);
+      $variables['items'][0]['#items'][i]['caption'] = $variables['items'][0]['#items'][i]['alt'];
+    }
+    }
+  }  **/
+}
