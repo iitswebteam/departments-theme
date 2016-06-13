@@ -1821,6 +1821,12 @@ h2.block-title {
 .webform-client-form .webform-component-fieldset .float-left {
   width: 45%;
 }
+.one-sidebar .article-type-webform input[type="text"] {
+  width: 99%;
+}
+.one-sidebar .webform-client-form .float-left {
+  width: 47%;
+}
 #article-205 #webform-client-form-205 #edit-submit-draggable-wrapper {
   top: 1875px;
 }
