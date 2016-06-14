@@ -76,7 +76,6 @@ hr {
   border: 2px solid #e0e5ea;
   height: 0px;
   /*system theme override*/
-
 }
 .bold {
   font-weight: 700;
@@ -384,7 +383,6 @@ ul.info {
   width: 385px;
   height: 180px;
   /* have to specify a height or page will not align*/
-
   float: left;
 }
 .view-faculty-name-list .views-row {
@@ -827,16 +825,14 @@ ul.quicktabs-tabs li {
 }
 .mgmt-social-media-link-txt {
   /*float: left;*/
-
   height: 37px;
   /*width: 165px;*/
-
   padding: 17px 19px;
 }
 /* New Social Media for registrar */
 /*new social media buttons*/
 a.reg_btn {
-  color: #ffffff;
+  color: white;
 }
 .reg_btn {
   width: 123px;
@@ -917,7 +913,6 @@ a.reg_btn {
 .mgmt-social-media-link-txt a {
   line-height: 20px;
   /*changed from 37px*/
-
 }
 .media-youtube-video {
   position: relative;
@@ -1014,7 +1009,6 @@ caption {
   padding: .5em 0 .5em 0em;
   margin: 0;
   /*border-bottom:3px solid #d0e0e8;*/
-
   color: #4c6687;
 }
 table tbody {
@@ -1025,7 +1019,6 @@ table tr td {
   text-align: left;
   padding: .1em;
   /*color:#002a5c;*/
-
   background: #f4f4f4;
   font-size: 14px;
   font-size: 1.4rem;
@@ -1298,7 +1291,6 @@ ul li.collapsed {
 /*overrides*/
 #block-views-accordions-block .block-inner {
   /*margin-left:0;*/
-
 }
 .ui-widget-content {
   background: none;
@@ -1306,7 +1298,8 @@ ul li.collapsed {
 .ui-state-default {
   background: none;
 }
-/*.ui-accordion .ui-accordion-header, #block-views-accordions-block div,*/.ui-accordion-content div {
+/*.ui-accordion .ui-accordion-header, #block-views-accordions-block div,*/
+.ui-accordion-content div {
   border: none !important;
 }
 .ui-widget-content {
@@ -1317,7 +1310,6 @@ ul li.collapsed {
 }
 .block-inner {
   /*margin-right:0*/
-
 }
 .block-inner,
 .region-help,
@@ -1398,7 +1390,6 @@ ul li.collapsed {
   text-indent: -99999px;
   width: 15px;
   /*margin: 0 auto;*/
-
 }
 .active .views-content-counter {
   background: #b5afa9;
@@ -1407,7 +1398,6 @@ ul li.collapsed {
 #widget_pager_bottom_slideshow_banner-block_1 {
   float: right;
   /*margin: 10px 18px 0 0;*/
-
 }
 .banner-description a {
   font-size: 28px;
@@ -1691,7 +1681,8 @@ h2.block-title {
 }
 /* Gallery 
 ------------------------*/
-/* View */.view-gallery .views-row {
+/* View */
+.view-gallery .views-row {
   float: left;
   margin: 0.5em 0 1em 0;
   margin-right: 2.6%;
@@ -1727,13 +1718,10 @@ h2.block-title {
   max-height: 350px;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
 }
 .article-photo-gallery .field-slideshow-caption {
   margin: 1em;
@@ -1749,13 +1737,10 @@ h2.block-title {
   padding: 0.5em 1.5em;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
   font-weight: bold;
 }
 .article-photo-gallery .field-slideshow-controls a.prev {
@@ -1997,7 +1982,6 @@ a.greybtn:hover {
 .event h2 {
   font-size: 1.8rem;
   /*line-height: 2.5rem;*/
-
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: 1rem;
@@ -2027,7 +2011,8 @@ Responsive below
 
 
 
-*//**
+*/
+/**
  * Use this file to conditionally override styles for devices.
  * If you adjust the media queries in the theme settings you should
  * adjust them here so they match.
@@ -2048,37 +2033,37 @@ Responsive below
     margin: 0 auto;
   }
   /*--- CTA's 
-    .view-cta-homepage .views-row {
-      float: none;
-      margin: 0 0 20px 0;
-      width: auto;
-    }
-    .views-field-field-cta-image img,
-    .cta-wrap img {
-      width: 100% !important;
-    }
-    .cta-img {
-      height: auto;
-    }
-    .html .region-sidebar-second {
-      width:96%;
-      margin: 0;
-      margin-left:2%;
-    }
-    .description {
-      margin-top: -3px;
-    }
-    .description img {
-      width: 100%;
-    }---*/
+  .view-cta-homepage .views-row {
+    float: none;
+    margin: 0 0 20px 0;
+    width: auto;
+  }
+  .views-field-field-cta-image img,
+  .cta-wrap img {
+    width: 100% !important;
+  }
+  .cta-img {
+    height: auto;
+  }
+  .html .region-sidebar-second {
+    width:96%;
+    margin: 0;
+    margin-left:2%;
+  }
+  .description {
+    margin-top: -3px;
+  }
+  .description img {
+    width: 100%;
+  }---*/
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 170px;
   }
   /* this makes the picture touch the text on teaser page view on mobile
-    
-    .teaser .field-type-image {
-      padding-right: 0;
-    }*/
+  
+  .teaser .field-type-image {
+    padding-right: 0;
+  }*/
   .teaser .field-name-field-list-page-image img {
     width: 180px;
     margin-right: 20px;
@@ -2573,8 +2558,8 @@ Responsive below
     font-family: sans-serif;
   }
   /*#main-content,
-    .one-sidebar #main-content,
-    #block-views-slideshow-banner-block .block-inner,*/
+  .one-sidebar #main-content,
+  #block-views-slideshow-banner-block .block-inner,*/
   #main-content .block-inner {
     margin-top: 0;
   }
@@ -2582,13 +2567,13 @@ Responsive below
     display: none;
   }
   /*
-  
-    teaser view was too spread out - style was inconsistent with the CTA teaser view on mobile
-  
-  
-    #main-content .field-name-body p {
-      line-height: 2em;
-    }*/
+
+  teaser view was too spread out - style was inconsistent with the CTA teaser view on mobile
+
+
+  #main-content .field-name-body p {
+    line-height: 2em;
+  }*/
   #main-content {
     padding: 0 .5em;
   }
@@ -2748,15 +2733,18 @@ Responsive below
   table.responsive3 tbody tr {
     padding: 0;
   }
+  .teaser .field-type-image {
+    float: none;
+  }
 }
 @media only screen and (min-width: 480px) and (max-width: 599px) {
   /*  .views-slideshow-controls-bottom {
-      position: absolute;
-      top: 195px;
-      right: 5px;
-      padding: 0;
-      z-index: 200;
-    }*/
+    position: absolute;
+    top: 195px;
+    right: 5px;
+    padding: 0;
+    z-index: 200;
+  }*/
   #views_slideshow_cycle_main_slideshow_banner-block {
     height: 250px;
   }
@@ -2791,7 +2779,6 @@ Responsive below
   /* fixes height of images for CTA*/
   #main-content {
     /*fixes margin on main content on tablet view, so content isn't touching screen edges*/
-  
     padding: 0 .5em;
     overflow: hidden;
     margin-right: 2%;
@@ -2822,7 +2809,6 @@ Responsive below
     float: left;
     margin-right: 2%;
     /*width: 210px;*/
-  
   }
   .views-slideshow-controls-bottom {
     position: absolute;
@@ -2834,8 +2820,8 @@ Responsive below
 }
 @media only screen and (min-width: 600px) {
   /* ----------------------
-    		HOMEPAGE BANNER
-    		---------------------- */
+  		HOMEPAGE BANNER
+  		---------------------- */
   .banner-description {
     color: #ffffff;
     background: #000;
@@ -3075,7 +3061,6 @@ Responsive below
     width: 385px;
     height: 180px;
     /* have to specify a height or page will not align*/
-  
     float: left;
   }
   .view-faculty-name-list .views-row {
@@ -3238,9 +3223,7 @@ Responsive below
   }
   #menu-bar ul li {
     /*width: 25%; we don't need this effect on buttons for tablet*/
-  
     /*border-bottom: 1px solid #fff;*/
-  
     border-top: none;
     float: left;
   }
